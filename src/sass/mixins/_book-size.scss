@@ -1,0 +1,18 @@
+$base-book-size-w: 680px; 
+$base-book-size-h: 492px; 
+
+@mixin book-size {
+	width: $base-book-size-w * 1.3;
+	height: $base-book-size-h * 1.3;
+	padding-left: 15px;
+	padding-right: 15px;
+	.book-article
+	{
+		width: 50%;
+	}
+
+	@include bd-wh-custom-min(1920px, 800px) {
+		width: 60vw;
+        height: 80vh;
+	}
+}
