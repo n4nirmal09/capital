@@ -16,4 +16,8 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+#Includes:
+1. Bootstrap 4 - added custom
+2. Gsap - Included
 ```
