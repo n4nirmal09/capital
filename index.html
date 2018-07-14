@@ -4,15 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>capitalgroup</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
   </head>
   <body>
-    <div id="main-wrapper">
-      <!-- Include common header -->
-    	<%= require('html-loader!./src/components/header.html') %>
-
-       <!-- Include common Banner -->
-      <%= require('html-loader!./src/components/banner.html') %>
-    </div>
+    
+    <%= require('html-loader?root=.&minimize=true&interpolate!./src/pages/index.html') %>
     <!-- built files will be auto injected -->
   </body>
 </html>

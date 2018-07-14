@@ -15,12 +15,12 @@ $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+$gray-400: #f6f8f9 !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #666666;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #888888;
+$gray-900: #333333;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -36,8 +36,8 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$theme-primary: #00abd8;
-$blue:    #007bff !default;
+$theme-primary: #005f9e;
+$blue:    #005f9e !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -61,13 +61,15 @@ $colors: map-merge((
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
+  "gray-light": $gray-400, 
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-900
 ), $colors);
 
 $primary:       $theme-primary !default;
 $primary-dark:  darken($theme-primary, 20%);
-$secondary:     $green !default;
+$secondary:     $gray-800;
+$secondary-light: $gray-400;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -81,12 +83,13 @@ $theme-colors: map-merge((
   "primary":    $primary,
   "primary-dark": $primary-dark,
   "secondary":  $secondary,
+  "secondary-light": $secondary-light,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark,
+  "dark":       $dark,         
   "highlight":  $highlight
 ), $theme-colors);
 // stylelint-enable
@@ -96,7 +99,7 @@ $theme-colors: map-merge((
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-800 !default;
+$body-color:                $gray-600;
 
 // Spacer
 $spacer: 2rem !default;
@@ -105,7 +108,7 @@ $spacer: 2rem !default;
 //
 // Style anchor elements.
 
-$link-color:                $primary !default;
+$link-color:                $primary;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
@@ -144,7 +147,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1125px
 ) !default;
 
 // Grid columns
@@ -187,12 +190,12 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Arial', sans-serif;; 
+$font-family-sans-serif:      'Lato', sans-serif; 
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-html:              15px;
+$font-size-html:              14px;
 $font-size-html-small:        12px;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
@@ -204,20 +207,20 @@ $font-weight-bold:            700 !default;
 $font-weight-extra-bold:      800;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.7;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                (60px / $font-size-html) * 1rem;
+$h2-font-size:                (45px / $font-size-html) * 1rem;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                (16px / $font-size-html) * 1rem;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        inherit !default;
-$headings-font-weight:        400 !default;
+$headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-color:              $gray-900;
 $heading-letter-spacing: 2px;
 
 $display1-size:               6rem !default;
@@ -272,7 +275,7 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -284,7 +287,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           1.8rem;
+$btn-border-radius:           0;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -363,9 +366,3 @@ $input-group-addon-border-color:        $input-border-color !default;
 $transition-beziers: ();
 $transition-beziers: map-merge((
   "slide-mask-in": cubic-bezier(0.9, 0, 0.1, 1)),$transition-beziers);
-
-// Layer zindex
-$header-index: 3;
-$entry-anim-index: 4;
-$page-banner-index: 1;
-$page-content-index: 2;

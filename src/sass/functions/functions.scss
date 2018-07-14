@@ -2,3 +2,7 @@
 @function theme-color($key) {
   @return map-get($theme-colors, $key);
 }
+
+@function calculateRem($size,$font-size-relative) {
+	@return  ($size / $font-size-relative) * 1rem;
+}

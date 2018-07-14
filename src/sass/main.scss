@@ -1,5 +1,11 @@
 @import "./variables",
-		"./mixins/mixins";
+		"./mixins/mixins",
+		"./functions/functions";
 
 /* Bootstrap Custom*/
 @import "./bootstrap/bootstrap-custom";
+
+@import "./typ",
+		"./layout",
+		"./components",
+		"./planselection";

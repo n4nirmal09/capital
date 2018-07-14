@@ -1,0 +1,50 @@
+//logo holder
+.logo-holder{
+	margin-top: -15px;
+}
+
+//Navigation
+.nav-list {
+	display: flex;
+	justify-content: center;
+	> li {
+		> a{
+			padding: 20px 30px;
+			position: relative;
+			color: $secondary;
+			&:after{
+				content: '';
+				width: 24px;
+				height: 5px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				position: absolute;
+				margin: auto;
+				background: $primary;
+				opacity: 0;
+				transition: ease 0.2s;
+			}
+			&:hover,&.active{
+				text-decoration: none;
+				color: $primary;
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+// Article banners
+.article-banner
+{
+	display: flex;
+	align-items:center;
+	max-width: 800px;
+	.figure{
+		margin-right: 90px;
+		margin-bottom: 0;
+	}
+}
+

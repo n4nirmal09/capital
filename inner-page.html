@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>capitalgroup</title>
+    <title>capitalgroup | inner</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
   </head>
   <body>
-    <div id="main-wrapper">
-    	<h1>Inner page</h1>
-    </div>
+    <%= require('html-loader?root=.&minimize=true&interpolate!./src/pages/inner-page.html') %>
     <!-- built files will be auto injected -->
   </body>
 </html>
