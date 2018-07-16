@@ -1,0 +1,35 @@
+.testimonial {
+  background-color: $testimonial-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  &-img {
+
+    @media (min-width: $screen-md) {
+      width: 30%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &-content {
+    padding: 1rem 0 0 0;
+    @media (min-width: $screen-md) {
+      padding: 0 1rem 0 3rem;
+      width: 70%;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 0 1rem 0 4rem;
+    }
+  }
+}
