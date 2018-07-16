@@ -3,6 +3,8 @@
   var s, NF = {
         init: function() {
             s = this.settings
+            this.select()
+            this.selectAll()
             this.scrollDierectionChecker()
             this.smoothScrolling()
             this.resizeListner()
@@ -26,11 +28,15 @@
             scrollBarWidth: 0
         },
 
-        select (s) {
-          return document.querySelector(s)
+        select () {
+          return window.select = s => {
+            return document.querySelector(s)
+          }
         },
-        selectAll (s) {
-          return document.querySelectorAll(s)
+        selectAll () {
+          return window.selectAll = s => {
+           return document.querySelectorAll(s)
+          }
         },
         detectIe : function(){
                
@@ -83,8 +89,8 @@
 
         headerScrollOut () {
             let scrollController = new ScrollMagic.Controller(),
-                mainWrapper = this.select('#main-wrapper'),
-                mainHeader = this.select('#main-header'),
+                mainWrapper = select('#main-wrapper'),
+                mainHeader = select('#main-header'),
                 tween = TweenLite.to(mainHeader, 0.5, {y: "-100%"})
 
             new ScrollMagic.Scene({
@@ -218,8 +224,8 @@
         },
 
         tabs () {
-          let tabLinks = this.selectAll('.tab-link>a'),
-              tabContents = this.selectAll('.tab-contents>div'),
+          let tabLinks = selectAll('.tab-link>a'),
+              tabContents = selectAll('.tab-contents>div'),
               removeInitial = function () {
                 tabLinks.forEach(link => {
                   link.parentNode.classList.remove('active')
@@ -234,15 +240,15 @@
               e.preventDefault()
               removeInitial()
               let target = link.href.split('#')[1]
-              this.select('#' + target).classList.add('active')
+              select('#' + target).classList.add('active')
               link.parentNode.classList.add('active')
             })
           })
         },
 
         accordian () {
-          let aTrigger = this.selectAll('.accordian-trigger'),
-              aPanel = this.selectAll('.accordian-panel'),
+          let aTrigger = selectAll('.accordian-trigger'),
+              aPanel = selectAll('.accordian-panel'),
               reset = function () {
                 aTrigger.forEach(trigger => {
                   trigger.classList.remove('active')

@@ -111,7 +111,7 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
-    // Learn
+    // Grow
     new HtmlWebpackPlugin({
       filename: 'grow.html',
       template: 'grow.html',
