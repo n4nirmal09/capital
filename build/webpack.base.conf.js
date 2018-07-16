@@ -100,7 +100,7 @@ module.exports = {
         // https://github.com/kangax/html-minifier#options-quick-reference
       }
     }),
-     // Inner-page
+    // Inner-page
     new HtmlWebpackPlugin({
       filename: 'inner-page.html',
       template: 'inner-page.html',

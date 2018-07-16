@@ -7,7 +7,10 @@ import './utilities/modernizr'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
+import graph from './scripts/graphscript'
+
 
 siteScripts.init()
+graph()
 
 import "@/sass/main.scss"
