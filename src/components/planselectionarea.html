@@ -1,27 +1,16 @@
 <section class="bg-secondary-light">
-	<div class="container">
-		<div class="plan-selection-area">
-			<header class="plan-selection-header py-4">
-				<article class="text-center mb-4">
-					<h1>Where are you at in life?</h1>
-				    <p>Choose your life stage to understand the basics and start investing in your kid’s future today.</p>
-				</article>
-				<nav class="plan-selection-links">
-				   <ul>
-				   	<li><a class="active" href=""><strong>Expecting a newborn</strong></a></li>
-					<li><a href=""><strong>A New Parent</strong></a></li>
-					<li><a href=""><strong>Starting College</strong></a></li>
-					<li><a href=""><strong>Finishing College</strong></a></li>
-					<li><a href=""><strong>A Grandparent</strong></a></li>
-				   </ul>
-				</nav>
-			</header>
-			
-			<div class="plan-selection-illustrations">
-				<img src="../assets/anim.jpg" class="img-fluid" alt="">
-			</div>
-
-		</div>
-	</div>
-	
+  <div class="container">
+    <div class="plan-selection-area">
+      <header class="plan-selection-header py-4">
+        <article class="text-center mb-4">
+          <h1>Where are you at in life?</h1>
+          <p>Choose your life stage to understand the basics and start investing in your kid’s future today.</p>
+        </article>
+      </header>
+      ${require('html-loader!./planselectionlink.html')}
+      <div class="plan-selection-illustrations">
+        <img src="../assets/anim.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
 </section>

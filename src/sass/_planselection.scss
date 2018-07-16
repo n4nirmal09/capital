@@ -5,8 +5,9 @@
 		margin:0;
 		padding:0;
 		display: flex;
-		justify-content: space-between;
 		> li {
+			flex:1;
+			text-align: center;
 			> a{
 				font-size: calculateRem(16px, $font-size-html);
 				color: $secondary;
