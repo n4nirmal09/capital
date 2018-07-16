@@ -63,7 +63,7 @@
 			cursor: pointer;
 			stroke: $green-dark;
 			fill: transparent;
-			transition: ease 0.2s;
+			transition: fill ease 0.2s;
 			&:hover,&.active{
 				fill: $green-dark;
 			}
