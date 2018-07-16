@@ -9,7 +9,7 @@ export const bannerSlider = function () {
 		this.mainTimeLine = null
         this.slideDelay = 3
 
-        this.init();
+        this.init()
         
 }
 
