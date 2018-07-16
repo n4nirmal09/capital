@@ -1,0 +1,33 @@
+/* Footer Start */
+.bg-white{
+	background: #fff !important;
+}
+.bg-blue{
+	background: #1862a1 !important;
+}
+.text-white{
+	color: #fff !important;
+}
+.main-footer{
+	.footer-heading{
+		font-size: calculateRem(16px, $font-size-html);
+	}
+	.footer-element{
+		li{
+			a{
+				color: #110101;
+				font-size: calculateRem(16px, $font-size-html);
+			}
+		}
+	}
+}
+.share-link {
+	@media screen and (max-width: $screen-md){
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 3rem 0;
+	}
+}
+/* Footer End */
