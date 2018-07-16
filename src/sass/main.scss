@@ -1,6 +1,10 @@
 @import "./variables",
 		"./mixins/mixins",
-		"./functions/functions";
+		"./functions/functions",
+		"./components/footer",
+		"./components/inputs",
+		"./components/table",
+		"./components/tab-contents";
 
 /* Bootstrap Custom*/
 @import "./bootstrap/bootstrap-custom";
@@ -10,4 +14,5 @@
 		"./components",
 		"./planselection",
 		"./tabs",
+		"./testimonial",
 		"./accordian";

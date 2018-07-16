@@ -2,16 +2,20 @@
 	<div class="container py-4">
 		<div class="row align-items-center">
 			<div class="logo-holder">
-				<a href="/">
+				<a href="index.html">
 					<img src="../assets/logo.png" class="img-fluid" alt="">
 				</a>
 			</div>
 
 			<div class="menu-holder col">
-				${require('html-loader!./mainnav.html')}
+          <nav id="main-navigation">
+            <ul class="nav-list list-unstyled mb-0">
+              <li><a href="learn.html"><strong>LEARN</strong></a></li>
+              <li><a href="javascript:void(0);"><strong>PLANS</strong></a></li>
+              <li><a href="invest.html" class="active"><strong>GROW</strong></a></li>
+            </ul>
+          </nav>
 			</div>
-
-
 
 			<div class="side-cta-holder d-flex align-items-center">
 				<div class="link-group">

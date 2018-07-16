@@ -5,7 +5,7 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -100,10 +100,10 @@ module.exports = {
         // https://github.com/kangax/html-minifier#options-quick-reference
       }
     }),
-    // Inner-page
+    // Learn
     new HtmlWebpackPlugin({
-      filename: 'inner-page.html',
-      template: 'inner-page.html',
+      filename: 'learn.html',
+      template: 'learn.html',
       inject: true,
       minify: {
         removeComments: false,
@@ -111,5 +111,16 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
+    // Grow
+    new HtmlWebpackPlugin({
+      filename: 'grow.html',
+      template: 'grow.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    })
   ]
 }
