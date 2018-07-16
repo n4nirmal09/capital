@@ -7,7 +7,12 @@ import './utilities/modernizr'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
+import graph from './scripts/graphscript'
+// import formdrop from './scripts/formdrop'
+
 
 siteScripts.init()
+graph()
 
+// formdrop()
 import "@/sass/main.scss"
