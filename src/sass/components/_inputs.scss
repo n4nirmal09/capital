@@ -1,0 +1,9 @@
+//Input Stylings
+
+.cg-textarea {
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
