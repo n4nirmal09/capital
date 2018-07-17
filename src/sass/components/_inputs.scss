@@ -8,6 +8,32 @@
   }
 }
 
+input, .form-control{
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// input fileds info
+
+.tab-input-info{
+  margin: 4rem 0;
+  label{
+    color: $gray-900;
+  }
+  .form-control{
+    border: 0;
+    border-bottom: 1px solid #666666;
+    border-radius: 0;
+    font-size: 30px;
+    font-weight: 500;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}
+
 // custom radio input styles
 
 [type="radio"]:checked,
