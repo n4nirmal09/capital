@@ -2,6 +2,7 @@ import 'babel-polyfill'
 import 'nodelist-foreach-polyfill'
 import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
+import './utilities/modernizr'
 import $ from 'jquery'
 
 // Semantic Ui 
@@ -15,7 +16,7 @@ import 'semantic-ui-transition/transition.css'
 $.fn.transition = require('semantic-ui-transition')
 
 
-import './utilities/modernizr'
+// Slick slider
 import './utilities/slick.js'
 
 // Site script
