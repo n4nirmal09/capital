@@ -21,9 +21,11 @@ export default () => {
 	  // },
 	  xAxis: {
 	    categories: [
-	      '1 year ',
-	      '9 years',
-	      '18 years'
+	      '1',
+	      '5',
+	      '10',
+	      '15',
+	      '20'
 	    ],
 	    plotBands: [{ // visualize the weekend
 	      from: 4.5,
@@ -49,7 +51,7 @@ export default () => {
 	  },
 	  tooltip: {
 	    shared: false,
-	    valueSuffix: ' units'
+	    valueSuffix: ' $'
 	  },
 	  credits: {
 	    enabled: false
@@ -60,8 +62,8 @@ export default () => {
 	    }
 	  },
 	  series: [{
-	    name: 'John',
-	    data: [1, 4, 3]
+	    name: 'Years',
+	    data: [0, 1, 3, 8, 11]
 	  }]
 	});
 }

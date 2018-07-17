@@ -33,7 +33,6 @@ import { selectionTabs } from './scripts/planselectiontab'
 import './scripts/initCustomSelect'
 
 
-
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
@@ -48,6 +47,6 @@ if (select('#plan-selection-slider')) new selectionTabs()
 // intialize graph
 graph()
 
-$('.dropdown').dropdown()
+// $('.dropdown').dropdown()
 
 import "@/sass/main.scss"
