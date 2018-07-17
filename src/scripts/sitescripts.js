@@ -1,4 +1,8 @@
   import ScrollMagic from 'ScrollMagic'
+  import $ from 'jquery'
+  $('.carousel-slides').slick({
+    slidesToShow: 2
+  })
 
   var s, NF = {
         init: function() {
@@ -12,6 +16,7 @@
             this.removeMethod()
             this.tabs()
             this.accordian()
+            this.hamburger()
             //this.headerScrollOut()
             //this.contentSlider();
         },
@@ -107,6 +112,17 @@
         windowheight: function() {
             var body = document.querySelector('.window_height');
             body.style.height = s.windowheight + 'px';
+        },
+
+        hamburger: function() {
+          let menus = selectAll('.hamburger-menu')
+          menus.forEach(menu => {
+            menu.addEventListener("click", () => {
+              let target = menu.dataset.target
+              select('#' + target).classList.toggle('active')
+            })
+          })
+
         },
 
         // Adding scroll class

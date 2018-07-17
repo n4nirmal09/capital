@@ -3012,6 +3012,4 @@ import $ from 'jquery'
         return _;
     };
 
-    window.slick = Slick
-
 }));
