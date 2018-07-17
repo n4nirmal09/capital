@@ -16,7 +16,9 @@ import {selectionTabs} from './scripts/planselectiontab'
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
-if(select('#circle-nav')) new bannerSlider()
+if(window.innerWidth > 992){
+	if(select('#circle-nav')) new bannerSlider()
+}
 
 if(select('#plan-selection-slider')) new selectionTabs()
 

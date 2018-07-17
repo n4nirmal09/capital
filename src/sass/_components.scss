@@ -44,7 +44,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		&,.logo-holder,.menu-holder,.container
+		&,.logo-holder, .nav-list, .container
 		{
 			transition: ease-out 0.4s;
 		}
@@ -80,7 +80,7 @@
 				.logo-holder{
 					margin-top: 0;
 				}
-				.menu-holder
+				.nav-list
 				{
 					opacity: 0;
 				}
@@ -164,6 +164,7 @@
   		{
   			display: none!important;
   		}
+  		box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.2)
   	}
 
   	.nav-list
