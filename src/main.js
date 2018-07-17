@@ -2,6 +2,17 @@ import 'babel-polyfill'
 import 'nodelist-foreach-polyfill'
 import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
+import $ from 'jquery'
+
+// Semantic Ui 
+import 'semantic-ui-popup/popup.css'
+$.fn.popup = require('semantic-ui-popup')
+
+import 'semantic-ui-dropdown/dropdown.css'
+$.fn.dropdown = require('semantic-ui-dropdown')
+
+import 'semantic-ui-transition/transition.css'
+$.fn.transition = require('semantic-ui-transition')
 
 
 import './utilities/modernizr'
@@ -12,6 +23,8 @@ import siteScripts from './scripts/sitescripts'
 import graph from './scripts/graphscript'
 import {bannerSlider} from './scripts/planselectionscript'
 import {selectionTabs} from './scripts/planselectiontab'
+
+
 
 // Site basic scripts
 siteScripts.init()
@@ -26,5 +39,7 @@ if(select('#plan-selection-slider')) new selectionTabs()
 
 // intialize graph
 graph()
+
+$('.dropdown').dropdown()
 
 import "@/sass/main.scss"
