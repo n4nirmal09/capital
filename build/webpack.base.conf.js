@@ -143,6 +143,17 @@ module.exports = {
         collapseWhitespace: false,
         removeAttributeQuotes: true
       }
+    }),
+    // Plan Detailed
+    new HtmlWebpackPlugin({
+      filename: 'simple-planning.html',
+      template: 'simple-planning.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
     })
   ]
 }
