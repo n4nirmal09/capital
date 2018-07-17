@@ -1,0 +1,84 @@
+<section>
+  <div class="container py-5">
+    <div>
+      ${require('html-loader?interpolate!./planselectionlinkslider.html')}
+
+      <div class="tab-wrapper pt-5">
+        <div class="tab-links">
+          <ul class="list-unstyled">
+            <li class="tab-link">
+              <a href="#tab-1">
+                <strong>What is College America?</strong>
+              </a>
+            </li>
+            <li class="tab-link">
+              <a href="#tab-2">
+                <strong>What are my options?</strong>
+              </a>
+            </li>
+            <li class="tab-link">
+              <a href="#tab-3">
+                <strong>Meet parents like you</strong>
+              </a>
+            </li>
+            <li class="tab-link">
+              <a href="#tab-4">
+                <strong>Open an account</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents">
+
+          <div id="tab-1" class="active">
+            <article class="pl-5">
+              <h1 class="tab-content-heading">Secure their future,
+                <br>whatever may come</h1>
+              <p>Having a child comes with a lot of new expenses and it can sometimes feel like your money is being pulled in
+                so many directions. The fact you’re already thinking about education funding means you’re ahead of the game.</p>
+            </article>
+            <div class="testimonial-wrapper mt-5 pl-md-5">
+              <div class="testimonial">
+                <div class="testimonial-img">
+                  <img src="../assets/testimonial/1.png" alt="testimonial image">
+                </div>
+                <div class="testimonial-content">
+                  <p>“I started saving as soon as I found out I was pregnant. It was important or me to start somewhere, as
+                    I didn’t want her to go through the burden of student debt that I had experienced.”</p>
+                  <button class="btn btn-outline-primary mt-4">Learn more from parents like you</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-2">
+            <article class="pl-5 text-left">
+              <h1 class="tab-content-heading">Find a plan that suits your needs</h1>
+              <p class="tab-content-desc">Compare the advantages of three popular college savings plans and learn why
+                  millions of parents like you are choosing CollegeAmerica® 529 Savings Accounts</p>
+            </article>
+            ${require('html-loader?interpolate!./table.html')}
+            <div class="text-right">
+              <a class="btn btn-outline-primary mr-3 mt-2" href="javascript:void(0);">Learn more</a>
+            </div>
+          </div>
+          <div id="tab-3">
+            <article class="pl-5 text-left">
+              <h1 class="tab-content-heading">Meet parents like you</h1>
+              <p class="tab-content-desc">Ullamco aute aute cillum velit excepteur magna ex do eiusmod non enim irure id fugiat. Dolore nostrud commodo
+                incididunt tempor in id esse ex ut esse cupidatat ullamco pariatur sint velit dolore.</p>
+            </article>
+          </div>
+          <div id="tab-4">
+            <article class="pl-5 text-left">
+              <h1 class="tab-content-heading">Open a 529</h1>
+              <form id="open-529" action="">
+                <textarea class="cg-textarea mt-4 w-100" name="open-529" id="open-529" cols="30" rows="10"></textarea>
+              </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

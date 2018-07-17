@@ -22,7 +22,62 @@
 }
 
 
-.plan-selection-illustrations
+
+
+.circle-illustrations-holder
 {
+ max-width: 850px;
+ margin: 0 auto;
+ position: relative;
+ > svg{
+ 	width: 100%;
+ 	height: 100%;
+ }
+
+ .illustrations{
+ 	position: absolute;
+ 	left: 25%;
+ 	top: 15%;
+ 	width: 50%;
+    height: 70%;
+
+ 	display: flex;
+ 	align-items:center;
+ 	justify-content: center;
+ }
+
+}
+
+// Circle nav
+#circle-nav{
+	#circle-nav-rail circle
+	{
+		fill: none;
+		stroke: darken($secondary-light, 10%);
+	}
+
+	#circle-nav-dots
+	{
+		fill: none;
+		> circle{
+			cursor: pointer;
+			stroke: $green-dark;
+			fill: transparent;
+			transition: fill ease 0.2s;
+			&:hover,&.active{
+				fill: $green-dark;
+			}
+		}
+	}
+	
+}
+
+.illustration
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 }

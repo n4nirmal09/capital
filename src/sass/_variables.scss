@@ -62,7 +62,7 @@ $colors: map-merge((
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
-  "gray-light": $gray-400, 
+  "gray-light": $gray-400,
   "gray":       $gray-600,
   "gray-dark":  $gray-900
 ), $colors);
@@ -90,7 +90,7 @@ $theme-colors: map-merge((
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark,         
+  "dark":       $dark,
   "highlight":  $highlight
 ), $theme-colors);
 // stylelint-enable
@@ -191,7 +191,7 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Lato', sans-serif; 
+$font-family-sans-serif:      'Lato', sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -212,7 +212,7 @@ $line-height-base:            1.7;
 
 $h1-font-size:                (60px / $font-size-html) * 1rem;
 $h2-font-size:                (45px / $font-size-html) * 1rem;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h3-font-size:                (35px / $font-size-html) * 1rem;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                (16px / $font-size-html) * 1rem;
 $h6-font-size:                $font-size-base !default;
@@ -367,3 +367,8 @@ $input-group-addon-border-color:        $input-border-color !default;
 $transition-beziers: ();
 $transition-beziers: map-merge((
   "slide-mask-in": cubic-bezier(0.9, 0, 0.1, 1)),$transition-beziers);
+
+
+// Testimonial
+
+$testimonial-bg: #f6f8f9;
