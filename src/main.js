@@ -15,75 +15,8 @@ import graph from './scripts/graphscript'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'
-// import swiper f
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-rom './scripts/gallerySlider'
-// import './scripts/gallerySlider'
+// import swiper from './scripts/gallerySlider'
+import './scripts/progressbar'
 
 import './scripts/initCustomSelect'
 
@@ -97,7 +30,6 @@ if (select('#plan-selection-slider')) new selectionTabs()
 // intialize graph
 graph()
 
-import './scripts/progressbar'
 
 $('.carousel-slides').slick()
 
