@@ -1,5 +1,20 @@
 //Tab Content Stylings
 
+// common elements
+
+.fnt-md{
+  font-size: calculateRem(16px, $font-size-html);
+}
+
+.fnt-lg{
+    font-size: calculateRem(18px, $font-size-html);
+}
+
+.fnt-bold{
+    font-weight: $font-weight-bold;
+}
+
+
 .tab-content-heading {
   font-size: 45px;
   font-weight: 700;
