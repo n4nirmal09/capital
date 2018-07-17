@@ -1,0 +1,54 @@
+// plans-new born
+
+.main-content-wrapper{
+    padding: 6rem 0 7rem 0;
+    .tab-content-heading{
+        margin-bottom: 2rem;
+    }
+}
+
+// cards info
+
+.card-info{
+    display: flex;
+    &__view{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        background: #ffffff;
+        padding: 5rem 1.5rem;
+        &:hover{
+            .view-hover{
+                visibility: visible;
+                transform: background-color 0.15s ease-in-out;
+            }
+        }
+    }
+    &__link{
+        align-self: flex-start;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.view-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    background: #0a619d;
+    padding: 5rem 1.5rem;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    color: #ffffff;
+    transform: background-color 0.15s ease-in-out;
+    a{
+        color: #fff;
+    }
+}
