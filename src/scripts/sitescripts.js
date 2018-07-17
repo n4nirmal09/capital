@@ -226,7 +226,10 @@
         tabs () {
           let tabLinks = selectAll('.tab-link>a'),
               tabContents = selectAll('.tab-contents>div'),
-              removeInitial = function () {
+              removeInitial = function (parent) {
+                let tabLinks = parent.querySelectorAll('.tab-link>a')
+                    tabContents = parent.querySelectorAll('.tab-contents>div')
+
                 tabLinks.forEach(link => {
                   link.parentNode.classList.remove('active')
                 })
@@ -238,7 +241,7 @@
           tabLinks.forEach(link => {
             link.addEventListener('click', (e) => {
               e.preventDefault()
-              removeInitial()
+              removeInitial(link.parentNode.parentNode.parentNode.parentNode)
               let target = link.href.split('#')[1]
               select('#' + target).classList.add('active')
               link.parentNode.classList.add('active')

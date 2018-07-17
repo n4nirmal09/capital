@@ -9,7 +9,7 @@ export const bannerSlider = function () {
 		this.mainTimeLine = null
         this.slideDelay = 3
 
-        this.init();
+        this.init()
         
 }
 
@@ -57,7 +57,7 @@ bannerSlider.prototype = {
 		}, 0.1, 0.5)
 		.to(this.circleRail, 0.5, {strokeDasharray: "5.006 5.006"})
 
-		new ScrollMagic.Scene({triggerElement: this.circleNav,duration:0, triggerHook: 'onEnter'})
+		new ScrollMagic.Scene({triggerElement: this.circleNav,duration:0, triggerHook: 'onCenter', offset:-200})
 		.setTween(tl)
 		.addTo(controller)
 
@@ -75,10 +75,10 @@ bannerSlider.prototype = {
 				y: 100,
 			}, 0.1, slide.id)
 			.staggerTo(slideItems,0.5,{
-				delay: this.slideDelay,
+				//delay: this.slideDelay,
 				y: 100,
 				autoAlpha: 0
-			}, -0.1)
+			}, -0.1,slide.id + "+=" + this.slideDelay)
 			.to(slide,0.2,{autoAlpha: 0}, slide.id + 'leave')
 			.addCallback(this.bannerUpdate,slide.id,[tl, this])
 		})
@@ -91,9 +91,17 @@ bannerSlider.prototype = {
 			nav.addEventListener('click', (e) => {
 				e.preventDefault()
 				let currentLabel = this.mainTimeLine.currentLabel(),
-				    target = nav.dataset.slide
+				    target = nav.dataset.slide,
+				    timeOut = "",
+				    seekTo = () => {
+				    	this.mainTimeLine.seek(target)
+				    }
 				if(currentLabel === target) return
-				this.mainTimeLine.seek(target)
+
+				clearTimeout(timeOut)
+				this.mainTimeLine.seek(currentLabel + "+=" + this.slideDelay)
+				//this.mainTimeLine.seek(target)
+				timeOut = setTimeout(seekTo,800) 
 			})
 		})
 	},

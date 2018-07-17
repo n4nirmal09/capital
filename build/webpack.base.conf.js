@@ -121,6 +121,17 @@ module.exports = {
         collapseWhitespace: false,
         removeAttributeQuotes: true
       }
+    }),
+    // Grow
+    new HtmlWebpackPlugin({
+      filename: 'plan.html',
+      template: 'plan.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
     })
   ]
 }

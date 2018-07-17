@@ -1,22 +1,27 @@
 
 /* general style for the form */
-.nl-form {
-	width: 100%;
-	margin: 0.3em auto 0 auto;
-	font-size: 4em;
-	line-height: 1.5;
+.cg-form {
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 28px;
+
+  @media (min-width: $screen-md) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
-.nl-form ul {
+.cg-form ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 /* normalize the input elements, make them look like everything else */
-.nl-form input,
-.nl-form select,
-.nl-form button {
+.cg-form input,
+.cg-form select,
+.cg-form button {
 	border: none;
 	background: transparent;
 	font-family: inherit;
@@ -31,115 +36,133 @@
 	-moz-appearance: none;
 }
 
-.nl-form input:focus {
+.cg-form input:focus {
 	outline: none;
 }
 
 /* custom field (drop-down, text element) styling  */
-.nl-field {
+.cg-field {
 	display: inline-block;
 	position: relative;
 }
 
-.nl-field.nl-field-open {
+#savingPlan-form {
+  .cg-field {
+    display: block;
+    margin-bottom: 1rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 1.4rem;
+    }
+  }
+}
+
+.cg-field.cg-field-open {
 	z-index: 10000;
 }
 
 /* the toggle is the visible part in the form */
-.nl-field-toggle,
-.nl-form input,
-.nl-form select  {
+.cg-field-toggle,
+.cg-form input,
+.cg-form select  {
 	line-height: inherit;
 	display: inline-block;
-	color: #b14943;
-	cursor: pointer;
-	border-bottom: 1px dashed #b14943;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+#savingPlan-form {
+  .cg-field-toggle,
+  .cg-form input,
+  .cg-form select  {
+    padding: 1rem 4rem 1rem 1rem;
+  }
+}
+
+.cg-field-toggle {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: url('../assets/icon-dropdown.png') center center no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* drop-down list / text element */
-.nl-field ul {
+.cg-field ul {
 	position: absolute;
 	visibility: hidden;
-	background: #76C3BD;
+  background: #fff;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
 	left: -0.5em;
 	top: 50%;
 	font-size: 80%;
 	opacity: 0;
-	-webkit-transform: translateY(-40%) scale(0.9);
-	-moz-transform: translateY(-40%) scale(0.9);
 	transform: translateY(-40%) scale(0.9);
-	-webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
-	transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field.nl-field-open ul {
+.cg-field.cg-field-open ul {
 	visibility: visible;
 	opacity: 1;
-	-webkit-transform: translateY(-50%) scale(1);
-	-moz-transform: translateY(-50%) scale(1);
 	transform: translateY(-50%) scale(1);
-	-webkit-transition: visibility 0s 0s, opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: visibility 0s 0s, opacity 0.3s, -moz-transform 0.3s;
 	transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field ul li {
-	color: #fff;
+.cg-field ul li {
 	position: relative;
 }
 
-.nl-dd ul li {
-	padding: 0 1.5em 0 0.5em;
+.cg-dd ul li {
+	padding: 1rem 2rem;
 	cursor: pointer;
-	white-space: nowrap;
+  white-space: nowrap;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $theme-primary;
+    color: #ffffff;
+  }
 }
 
-.nl-dd ul li.nl-dd-checked {
+.cg-dd ul li.cg-dd-checked {
+  color: $theme-primary;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.no-touch .cg-dd ul li:hover {
+  background: $theme-primary;
+  color: #ffffff;
+}
+
+.no-touch .cg-dd ul li:hover:active {
 	color: #478982;
 }
 
-.no-touch .nl-dd ul li:hover {
-	background: rgba(0,0,0,0.05);
-}
 
-.no-touch .nl-dd ul li:hover:active {
-	color: #478982;
-}
-
-/* icons for some elements */
-.nl-dd ul li.nl-dd-checked:before,
-.nl-submit:before,
-.nl-field-go:before {
-	font-family: 'nlicons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-.nl-dd ul li.nl-dd-checked:before {
-	content: "\e000";
-	position: absolute;
-	right: 1em;
-	font-size: 50%;
-	line-height: 3;
-}
-
-.nl-ti-text ul {
+.cg-ti-text ul {
 	min-width: 8em;
 }
 
-.nl-ti-text ul li.nl-ti-input input {
+.cg-ti-text ul li.cg-ti-input input {
 	width: 100%;
 	padding: 0.2em 2em 0.2em 0.5em;
 	border-bottom: none;
 	color: #fff;
 }
 
-.nl-form .nl-field-go {
+.cg-form .cg-field-go {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -151,45 +174,37 @@
 	color: transparent;
 }
 
-.nl-field-go:before {
-	content: "\e001";
-	font-size: 75%;
-	color: #fff;
-	width: 100%;
-	line-height: 2.5;
-	display: block;
-}
 
 /* custom placeholder color */
-input::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.8);
-}
+// input::-webkit-input-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
 
-input:active::-webkit-input-placeholder ,
-input:focus::-webkit-input-placeholder {
-	color: rgba(255,255,255,0.2);
-}
+// input:active::-webkit-input-placeholder ,
+// input:focus::-webkit-input-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
 
-input::-moz-placeholder {
-	color: rgba(255,255,255,0.8);
-}
+// input::-moz-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
 
-input:active::-moz-placeholder,
-input:focus::-moz-placeholder {
-	color: rgba(255,255,255,0.2);
-}
+// input:active::-moz-placeholder,
+// input:focus::-moz-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
 
-input:-ms-input-placeholder {
-	color: rgba(255,255,255,0.8);
-}
+// input:-ms-input-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
 
-input:active::-ms-input-placeholder ,
-input:focus::-ms-input-placeholder {
-	color: rgba(255,255,255,0.2);
-}
+// input:active::-ms-input-placeholder ,
+// input:focus::-ms-input-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
 
 /* example field below text input */
-.nl-ti-text ul li.nl-ti-example {
+.cg-ti-text ul li.cg-ti-example {
 	font-size: 40%;
 	font-style: italic;
 	font-weight: 400;
@@ -198,16 +213,16 @@ input:focus::-ms-input-placeholder {
 	border-top: 1px dashed rgba(255,255,255,0.7);
 }
 
-.nl-ti-text ul li.nl-ti-example em {
+.cg-ti-text ul li.cg-ti-example em {
 	color: #fff
 }
 
 /* submit button */
-.nl-submit-wrap {
+.cg-submit-wrap {
 	margin-top: 0.4em;
 }
 
-.nl-form .nl-submit {
+.cg-form .cg-submit {
 	line-height: 3;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -220,7 +235,7 @@ input:focus::-ms-input-placeholder {
 	letter-spacing: 3px;
 }
 
-.nl-submit:before {
+.cg-submit:before {
 	content: "\e001";
 	color: #fff;
 	float: left;
@@ -229,17 +244,17 @@ input:focus::-ms-input-placeholder {
 	background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active {
+.no-touch .cg-form .cg-submit:hover,
+.no-touch .cg-form .cg-submit:active {
 	background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover:before {
+.no-touch .cg-form .cg-submit:hover:before {
 	background: #58a199;
 }
 
 /* overlay becomes visible when a field is opened */
-.nl-overlay {
+.cg-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -254,22 +269,10 @@ input:focus::-ms-input-placeholder {
 	transition: visibility 0s 0.3s, opacity 0.3s;
 }
 
-.nl-field.nl-field-open ~ .nl-overlay {
+.cg-field.cg-field-open ~ .cg-overlay {
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition-delay: 0s;
 	-moz-transition-delay: 0s;
 	transition-delay: 0s;
-}
-
-@media screen and (max-width: 45em) {
-	.nl-form {
-		font-size: 3em;
-	}
-}
-
-@media screen and (max-width: 25em) {
-	.nl-form {
-		font-size: 2em;
-	}
 }

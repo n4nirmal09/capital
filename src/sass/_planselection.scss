@@ -9,10 +9,22 @@
 			flex:1;
 			text-align: center;
 			> a{
+				display: block;
 				font-size: calculateRem(16px, $font-size-html);
 				color: $secondary;
-
+				svg path
+				{
+					fill: $secondary;
+				}
+				&,svg path
+				{
+					transition: ease 0.3s;
+				}
 				&:hover,&.active{
+					svg path
+					{
+						fill: $primary;
+					}
 					color: $primary;
 					text-decoration: none;
 				}
@@ -80,4 +92,48 @@
 	width: 100%;
 	height: 100%;
 	text-align: center;
+}
+
+.selection-link
+{
+	>a> *{
+		display: block;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+
+	.icon-holder{
+		width: 80px;
+		height: 75px;
+		margin: auto;
+		> svg{
+			max-width: 30px;
+		}
+		+ strong{
+			padding-top:18px;
+		}
+	}
+}
+
+
+.plan-selection-slider-wrapper
+{
+	position: relative;
+	.slider-wrapper
+	{
+		position: absolute;
+		width: 100%;
+		top: 75px;
+		left: 0;
+	}
+}
+
+.plan-selection-tabs{
+	> div:not(.active)
+	{
+		display: none;
+	}
 }

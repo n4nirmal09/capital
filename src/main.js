@@ -10,12 +10,19 @@ import siteScripts from './scripts/sitescripts'
 import graph from './scripts/graphscript'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
+import { selectionTabs } from './scripts/planselectiontab'
 
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
-new bannerSlider()
+if (select('#circle-nav')) new bannerSlider()
+
+if (select('#plan-selection-slider')) new selectionTabs()
+
 // intialize graph
 graph()
+
+// Initialize custom select firld
+import './scripts/initCustomSelect'
 
 import "@/sass/main.scss"
