@@ -2,8 +2,10 @@ import 'babel-polyfill'
 import 'nodelist-foreach-polyfill'
 import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
+import $ from 'jquery'
 
 import './utilities/modernizr'
+import './utilities/slick.js'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
@@ -20,5 +22,8 @@ if(select('#plan-selection-slider')) new selectionTabs()
 
 // intialize graph
 graph()
+
+
+$('.carousel-slides').slick()
 
 import "@/sass/main.scss"
