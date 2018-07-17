@@ -33,3 +33,21 @@
     }
   }
 }
+
+.cg-blockquote {
+
+  &__content {
+    color: #666666;
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+    // letter-spacing: -0.18px;
+  }
+
+  &__author {
+    color: #110101;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}

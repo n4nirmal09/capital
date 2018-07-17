@@ -1,0 +1,70 @@
+/*progressbar*/
+.progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+.progressbar li {
+	list-style-type: none;
+	// width: ;
+	float: left;
+  position: relative;
+  @media (min-width: $screen-md) {
+    height: 60px;
+    float: none;
+  }
+}
+.progressbar li:before {
+	content: '';
+	// counter-increment: step;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+	// line-height: 20px;
+	display: inline-block;
+	// font-size: 10px;
+	color: #333;
+	background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.5);
+  left: -2rem;
+  position: absolute;
+  top: 0.3rem;
+}
+/*progressbar connectors*/
+.progressbar li:not(:last-of-type) {
+  &:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: -1.6rem;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+  }
+
+}
+.progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	// content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.progressbar li.active:before{
+	background: $theme-primary;
+	border: 1px solid $theme-primary;
+}
+
+.step {
+
+	box-sizing: border-box;
+	width: 80%;
+
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+.step:not(:first-of-type) {
+	display: none;
+}

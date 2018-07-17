@@ -26,6 +26,7 @@ if (select('#plan-selection-slider')) new selectionTabs()
 // intialize graph
 graph()
 
+import './scripts/progressbar'
 
 $('.carousel-slides').slick()
 

@@ -1,25 +1,58 @@
 <section>
-	<div class="container py-5">
-		<div>
+  <div class="container py-5">
+    <div>
       ${require('html-loader?interpolate!./planselectionlinkslider.html')}
 
-    <!-- main-content start-->
-    <div class="main-content-wrapper">
-      <!-- heading info-->
-      <div class="row">
-        <div class="col-md-12 text-right">
+      <!-- main-content start-->
+      <div class="main-content-wrapper">
+        <!-- heading info-->
+        <div class="row">
+          <div class="col-md-12 text-right">
 
+          </div>
         </div>
-      </div>
-      <!-- cards info-->
-      <div class="row">
-        <div class="col-md-4 card-info">
-          1
-        </div>
-        <!-- card2-->
-        <div class="col-md-8 card-info">
-          2
-        </div>
+        <!-- cards info-->
+        <div class="row">
+          <div class="col-md-4 card-info">
+            <ul id="progressbar" class="progressbar">
+              <li class="active">Establish Goal</li>
+              <li>Understand your Numbers</li>
+              <li>Create a Plan</li>
+              <li>Validate your Strategy</li>
+              <li>Open a 529</li>
+            </ul>
+          </div>
+          <!-- card2-->
+          <div class="col-md-8 card-info">
+            <fieldset class="step">
+              1
+              <button class="next btn btn-outline-primary" type="button">Next</button>
+            </fieldset>
+            <fieldset class="step">
+              2
+
+              <button class="previous btn btn-outline-primary" type="button">Back</button>
+              <button class="next btn btn-outline-primary" type="button">Next</button>
+            </fieldset>
+            <fieldset class="step">
+              3
+
+              <button class="previous btn btn-outline-primary" type="button">Back</button>
+              <button class="next btn btn-outline-primary" type="button">Next</button>
+            </fieldset>
+            <fieldset class="step">
+              4
+
+              <button class="previous btn btn-outline-primary" type="button">Back</button>
+              <button class="next btn btn-outline-primary" type="button">Next</button>
+            </fieldset>
+            <fieldset class="step">
+              5
+              <button class="previous btn btn-outline-primary" type="button">Back</button>
+              <button class="btn btn-outline-primary" type="submit">Submit</button>
+
+            </fieldset>
+          </div>
 
         </div>
 
@@ -28,6 +61,6 @@
 
     </div>
 
-		</div>
-	</div>
+  </div>
+  </div>
 </section>
