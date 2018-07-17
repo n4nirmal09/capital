@@ -6,6 +6,8 @@ import $ from 'jquery'
 
 import './utilities/modernizr'
 import './utilities/slick.js'
+// import './utilities/dropdown.js'
+// import './utilities/checkbox.js'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
