@@ -1,6 +1,11 @@
 @import "./variables",
 		"./mixins/mixins",
-		"./functions/functions";
+		"./functions/functions",
+		"./components/footer",
+		"./components/inputs",
+		"./components/table",
+		"./components/customselect",
+		"./components/tab-contents";
 
 /* Bootstrap Custom*/
 @import "./bootstrap/bootstrap-custom";

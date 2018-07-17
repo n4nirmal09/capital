@@ -100,10 +100,10 @@ module.exports = {
         // https://github.com/kangax/html-minifier#options-quick-reference
       }
     }),
-    // Inner-page
+    // Learn
     new HtmlWebpackPlugin({
-      filename: 'inner-page.html',
-      template: 'inner-page.html',
+      filename: 'learn.html',
+      template: 'learn.html',
       inject: true,
       minify: {
         removeComments: false,
@@ -111,16 +111,16 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
-    // Inner-page
+    // Grow
     new HtmlWebpackPlugin({
-      filename: 'invest.html',
-      template: 'invest.html',
+      filename: 'grow.html',
+      template: 'grow.html',
       inject: true,
       minify: {
         removeComments: false,
         collapseWhitespace: false,
         removeAttributeQuotes: true
       }
-    }),
+    })
   ]
 }
