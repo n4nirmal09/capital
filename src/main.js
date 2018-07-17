@@ -6,6 +6,7 @@ import $ from 'jquery'
 
 import './utilities/modernizr'
 import './utilities/slick.js'
+// import './utilities/dropdown.js'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
@@ -15,6 +16,8 @@ import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'
 // import swiper from './scripts/gallerySlider'
 // import './scripts/gallerySlider'
+
+import './scripts/initCustomSelect'
 
 // Site basic scripts
 siteScripts.init()

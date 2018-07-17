@@ -7,7 +7,7 @@
         <div class="tab-wrapper pt-5 active" id="plan-1">
           <div class="tab-links">
             <ul class="list-unstyled">
-              <li class="tab-link">
+              <li class="tab-link active">
                 <a href="#tab-1">
                   <strong>Overview</strong>
                 </a>
@@ -107,7 +107,14 @@
                 <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
                   go.</p>
-                ${require('html-loader?interpolate!./graph.html')}
+                  <div class="row">
+                    <div class="col-sm-6">
+                        ${require('html-loader?interpolate!./savingplan-dropdown.html')}
+                    </div>
+                    <div class="col-sm-6">
+                        ${require('html-loader?interpolate!./graph.html')}
+                    </div>
+                  </div>
               </article>
 
             </div>
@@ -161,9 +168,9 @@
         <div class="tab-wrapper pt-5" id="plan-2">
           <div class="tab-links">
             <ul class="list-unstyled">
-              <li class="tab-link">
+              <li class="tab-link active">
                 <a href="#tab-2-1">
-                  <strong>Overview</strong>
+                  <strong>Overview 2</strong>
                 </a>
               </li>
               <li class="tab-link">
