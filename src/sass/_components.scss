@@ -1,6 +1,38 @@
 //logo holder
-.logo-holder{
-	margin-top: -15px;
+
+
+// Hamburger
+
+.hamburger-menu
+{
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	cursor: pointer;
+	> span{
+		width: 100%;
+		display: block;
+		height: 3px;
+		background: $green-dark;
+		transition: ease 0.3s;
+		+ span {
+			margin-top: 4px;
+		}
+		&:nth-child(2)
+		{
+			width: 80%
+		}
+		&:nth-child(3)
+		{
+			width: 60%
+		}
+	}
+
+	&:hover {
+		> span{
+			width: 100%!important;
+		}
+	}
 }
 
 // Mainheader
@@ -12,7 +44,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		&,.logo-holder,.menu-holder,.container
+		&,.logo-holder, .nav-list, .container
 		{
 			transition: ease-out 0.4s;
 		}
@@ -22,35 +54,48 @@
 		}
 	}
 
-	// header scroll manupulation
-	@at-root .scrolled {
-		#main-header.overlay-header
-		{
-			position: fixed;
-			//top: 0;
-			transform: translateY(-100%);
-			box-shadow: 0 0 10px 0px fade-out(#000, 0.8);
-			.container{
-				padding-top: 10px!important;
-				padding-bottom: 10px!important;
-			}
-			.logo-holder{
-				margin-top: 0;
-			}
-			.menu-holder
-			{
-				opacity: 0;
-			}
-		}
+
+	#site-hamburger
+	{
+		margin-right: 20px;
 	}
 
-	@at-root .scrolled.scrolling-up
-	{
-		#main-header.overlay-header
+	.logo-holder{
+		margin-top: -22px;
+	}
+	
+	@include bd-float-bp-min {
+		// header scroll manupulation
+		@at-root .scrolled {
+			#main-header.overlay-header
+			{
+				position: fixed;
+				//top: 0;
+				transform: translateY(-100%);
+				box-shadow: 0 0 10px 0px fade-out(#000, 0.8);
+				.container{
+					padding-top: 10px!important;
+					padding-bottom: 10px!important;
+				}
+				.logo-holder{
+					margin-top: 0;
+				}
+				.nav-list
+				{
+					opacity: 0;
+				}
+			}
+		}
+
+		@at-root .scrolled.scrolling-up
 		{
-			transform: translateY(0) !important;
+			#main-header.overlay-header
+			{
+				transform: translateY(0) !important;
+			}
 		}
 	}
+	
 }
 
 //Navigation
@@ -85,6 +130,86 @@
 			}
 		}
 	}
+}
+
+// responsive header
+@include bd-float-bp-max {
+  #main-header
+  {
+  	&.overlay-header
+  	{
+  		position: relative;
+  	   top: 0;
+  	   + #main-content
+	  	{
+	  		padding-top: 0;
+	  	}
+	  	transform: none!important;
+  	}
+	
+	.container{
+		position: relative;
+	}
+	#site-hamburger
+	{
+		margin-left: 15px;
+	}
+  	.menu-holder
+  	{
+  		position: absolute;
+  		top: 100%;
+  		width: 100%;
+  		left: 0;
+  		background: #fff;
+  		border-top: 1px solid $secondary-light;
+  		display: block!important;
+
+  		&:not(.active)
+  		{
+  			display: none!important;
+  		}
+  		box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.2)
+  	}
+
+  	.nav-list
+  	{
+  		padding-bottom: 20px;
+  		border-bottom: 1px solid $secondary-light;
+  		display: block;
+  		> li {
+  			> a{
+  				display: block;
+  				&:after{
+  					width: 100%;
+  					bottom: 0;
+  				}
+  			}
+  		}
+  	}
+
+  	.side-cta-holder 
+  	{
+  		padding:20px 15px;
+  		flex-flow: row wrap;
+  		background: $secondary-light;
+  		display: block!important;
+  		> *{
+  			width: 100%;
+  			text-align: center;
+  			display: block;
+  		}
+  		.link-group
+  		{
+  			padding: 0 20px
+  		}
+
+  		.btn{
+  			max-width: 320px;
+  			margin: 20px auto!important;
+  			
+  		}
+  	}
+  }
 }
 
 // Article banners
