@@ -14,7 +14,7 @@ import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'
 // import swiper from './scripts/gallerySlider'
-import './scripts/gallerySlider'
+// import './scripts/gallerySlider'
 
 // Site basic scripts
 siteScripts.init()
