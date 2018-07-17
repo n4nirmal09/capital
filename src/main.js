@@ -2,15 +2,16 @@ import 'babel-polyfill'
 import 'nodelist-foreach-polyfill'
 import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
-
+// import 'swiper'
 import './utilities/modernizr'
-
 // Site script
 import siteScripts from './scripts/sitescripts'
 import graph from './scripts/graphscript'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'
+// import swiper from './scripts/gallerySlider'
+import './scripts/gallerySlider'
 
 // Site basic scripts
 siteScripts.init()
@@ -25,4 +26,6 @@ graph()
 // Initialize custom select firld
 import './scripts/initCustomSelect'
 
+// mySwiper()
+// formdrop()
 import "@/sass/main.scss"
