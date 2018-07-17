@@ -1,18 +1,42 @@
 <section>
-	<div class="container py-5">
-		<div>
-			${require('html-loader?interpolate!./planselectionlinkslider.html')}
-      
+  <div class="container py-5">
+    <div>
+      ${require('html-loader?interpolate!./planselectionlinkslider.html')}
+
       <div class="plan-selection-tabs">
         <div class="tab-wrapper pt-5 active" id="plan-1">
           <div class="tab-links">
             <ul class="list-unstyled">
-              <li class="tab-link"><a href="#tab-1"><strong>Overview</strong></a></li>
-              <li class="tab-link"><a href="#tab-2"><strong>Where do i begin?</strong></a></li>
-              <li class="tab-link"><a href="#tab-3"><strong>What are my options?</strong></a></li>
-              <li class="tab-link"><a href="#tab-4"><strong>When should i start?</strong></a></li>
-              <li class="tab-link"><a href="#tab-5"><strong>Can i afford it?</strong></a></li>
-              <li class="tab-link"><a href="#tab-6"><strong>How can i boost my contribution?</strong></a></li>
+              <li class="tab-link active">
+                <a href="#tab-1">
+                  <strong>Overview</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2">
+                  <strong>Where do i begin?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-3">
+                  <strong>What are my options?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-4">
+                  <strong>When should i start?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-5">
+                  <strong>Can i afford it?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-6">
+                  <strong>How can i boost my contribution?</strong>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="tab-contents">
@@ -21,7 +45,9 @@
               <article class="pl-5 text-left">
                 <h3 class="tab-content-subheading">expecting a newborn</h3>
                 <h1 class="tab-content-heading">Managing the balancing act</h1>
-                <p class="tab-content-desc">Being a new parent comes with a lot of new expenses and it can sometimes feel like your money is being pulled in so many directions. The fact you’re already thinking about education funding means you’re ahead of the game.</p>
+                <p class="tab-content-desc">Being a new parent comes with a lot of new expenses and it can sometimes feel like your money is being pulled
+                  in so many directions. The fact you’re already thinking about education funding means you’re ahead of the
+                  game.</p>
               </article>
               <div class="testimonial-wrapper mt-5 pl-md-5">
                 <div class="testimonial">
@@ -40,7 +66,8 @@
             <div id="tab-2">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Understand the basics</h1>
-                <p class="tab-content-desc">A 529’s is a tax- friendly savings account designed to encourage saving for your kid’s education costs at eligible undergraduate, graduate and trade schools or for technical and professional training.</p>
+                <p class="tab-content-desc">A 529’s is a tax- friendly savings account designed to encourage saving for your kid’s education costs at
+                  eligible undergraduate, graduate and trade schools or for technical and professional training.</p>
               </article>
 
               <div class="mt-5">
@@ -66,20 +93,28 @@
             <div id="tab-3">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find a plan that suits your needs</h1>
-                <p class="tab-content-desc">Compare the advantages of three popular college savings plans and learn why
-                  millions of parents like you are choosing CollegeAmerica® 529 Savings Account</p>
-                </article>
+                <p class="tab-content-desc">Compare the advantages of three popular college savings plans and learn why millions of parents like you
+                  are choosing CollegeAmerica® 529 Savings Account</p>
+              </article>
               ${require('html-loader?interpolate!./table.html')}
               <div class="text-right">
-                  <a class="btn btn-outline-primary mr-3 mt-2" href="javascript:void(0);">Learn more</a>
-                </div>
+                <a class="btn btn-outline-primary mr-3 mt-2" href="javascript:void(0);">Learn more</a>
               </div>
+            </div>
 
-              <div id="tab-4">
-                <article class="pl-5 text-left">
-                  <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
-                  <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you go.</p>
-                  ${require('html-loader?interpolate!./graph.html')}
+            <div id="tab-4">
+              <article class="pl-5 text-left">
+                <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
+                <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
+                  go.</p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                        ${require('html-loader?interpolate!./savingplan-dropdown.html')}
+                    </div>
+                    <div class="col-sm-6">
+                        ${require('html-loader?interpolate!./graph.html')}
+                    </div>
+                  </div>
               </article>
 
             </div>
@@ -88,10 +123,9 @@
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br>
-                  the type of school you are saving for, how much of it you plan to cover and how
-                  much you can afford to save. Our planning tool will help you set a realistic goal
-                  and find the contribution amount that suits you.
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  you.
                 </p>
               </article>
             </div>
@@ -99,30 +133,32 @@
             <div id="tab-6">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Small gifts can lead to a big future</h1>
-                <p class="tab-content-desc">CollegeAmerica allows family members, friends and even the beneficiary contribute to the account. While grandparents may opt to make Education part of their legacy, birthdays and baby showers are also a great way for others to shape the future of someone they care about</p>
+                <p class="tab-content-desc">CollegeAmerica allows family members, friends and even the beneficiary contribute to the account. While grandparents
+                  may opt to make Education part of their legacy, birthdays and baby showers are also a great way for others
+                  to shape the future of someone they care about</p>
               </article>
 
-              <div class="row pl-5 mt-3">
+              <div class="row pl-5 mt-5">
                 <div class="col-sm-4">
                   <div class="gift-box">
-                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/gift-birthday.png" alt="gift icon" />
                     <h2 class="gift-box__title">1st Birthdays can raise an average of $5000 in contributions without gift-tax consequences.</h2>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="gift-box">
-                      <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/gift-grand-parents.png" alt="gift icon" />
                     <h2 class="gift-box__title">Grandparents can contribute up to $14,000 a year towards their grandkids education</h2>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="gift-box">
-                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/gift-loved-ones.png" alt="gift icon" />
                     <h2 class="gift-box__title">Family and friends can also collaborate by giving meaningful gifts for your child’s milestones.</h2>
                   </div>
                 </div>
               </div>
-              <div class="pl-5 text-right">
+              <div class="pl-5 text-right mt-2">
                 <a class="btn btn-outline-primary ml-3 mt-2" href="javascript:void(0);">Learn more</a>
               </div>
             </div>
@@ -132,12 +168,36 @@
         <div class="tab-wrapper pt-5" id="plan-2">
           <div class="tab-links">
             <ul class="list-unstyled">
-              <li class="tab-link"><a href="#tab-2-1"><strong>Overview</strong></a></li>
-              <li class="tab-link"><a href="#tab-2-2"><strong>Where do i begin?</strong></a></li>
-              <li class="tab-link"><a href="#tab-2-3"><strong>What are my options?</strong></a></li>
-              <li class="tab-link"><a href="#tab-2-4"><strong>When should i start?</strong></a></li>
-              <li class="tab-link"><a href="#tab-2-5"><strong>Can i afford it?</strong></a></li>
-              <li class="tab-link"><a href="#tab-2-6"><strong>How can i boost my contribution?</strong></a></li>
+              <li class="tab-link active">
+                <a href="#tab-2-1">
+                  <strong>Overview 2</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2-2">
+                  <strong>Where do i begin?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2-3">
+                  <strong>What are my options?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2-4">
+                  <strong>When should i start?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2-5">
+                  <strong>Can i afford it?</strong>
+                </a>
+              </li>
+              <li class="tab-link">
+                <a href="#tab-2-6">
+                  <strong>How can i boost my contribution?</strong>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="tab-contents">
@@ -146,7 +206,9 @@
               <article class="pl-5 text-left">
                 <h3 class="tab-content-subheading">expecting a newborn</h3>
                 <h1 class="tab-content-heading">Managing the balancing act</h1>
-                <p class="tab-content-desc">Being a new parent comes with a lot of new expenses and it can sometimes feel like your money is being pulled in so many directions. The fact you’re already thinking about education funding means you’re ahead of the game.</p>
+                <p class="tab-content-desc">Being a new parent comes with a lot of new expenses and it can sometimes feel like your money is being pulled
+                  in so many directions. The fact you’re already thinking about education funding means you’re ahead of the
+                  game.</p>
               </article>
               <div class="testimonial-wrapper mt-5 pl-md-5">
                 <div class="testimonial">
@@ -165,7 +227,8 @@
             <div id="tab-2-2">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Understand the basics</h1>
-                <p class="tab-content-desc">A 529’s is a tax- friendly savings account designed to encourage saving for your kid’s education costs at eligible undergraduate, graduate and trade schools or for technical and professional training.</p>
+                <p class="tab-content-desc">A 529’s is a tax- friendly savings account designed to encourage saving for your kid’s education costs at
+                  eligible undergraduate, graduate and trade schools or for technical and professional training.</p>
               </article>
 
               <div class="mt-5">
@@ -191,20 +254,21 @@
             <div id="tab-2-3">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find a plan that suits your needs</h1>
-                <p class="tab-content-desc">Compare the advantages of three popular college savings plans and learn why
-                  millions of parents like you are choosing CollegeAmerica® 529 Savings Account</p>
-                </article>
+                <p class="tab-content-desc">Compare the advantages of three popular college savings plans and learn why millions of parents like you
+                  are choosing CollegeAmerica® 529 Savings Account</p>
+              </article>
               ${require('html-loader?interpolate!./table.html')}
               <div class="text-right">
-                  <a class="btn btn-outline-primary mr-3 mt-2" href="javascript:void(0);">Learn more</a>
-                </div>
+                <a class="btn btn-outline-primary mr-3 mt-2" href="javascript:void(0);">Learn more</a>
               </div>
+            </div>
 
-              <div id="tab-2-4">
-                <article class="pl-5 text-left">
-                  <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
-                  <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you go.</p>
-                  ${require('html-loader?interpolate!./graph.html')}
+            <div id="tab-2-4">
+              <article class="pl-5 text-left">
+                <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
+                <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
+                  go.</p>
+                ${require('html-loader?interpolate!./graph.html')}
               </article>
 
             </div>
@@ -213,10 +277,9 @@
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br>
-                  the type of school you are saving for, how much of it you plan to cover and how
-                  much you can afford to save. Our planning tool will help you set a realistic goal
-                  and find the contribution amount that suits you.
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  you.
                 </p>
               </article>
             </div>
@@ -224,25 +287,27 @@
             <div id="tab-2-6">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Small gifts can lead to a big future</h1>
-                <p class="tab-content-desc">CollegeAmerica allows family members, friends and even the beneficiary contribute to the account. While grandparents may opt to make Education part of their legacy, birthdays and baby showers are also a great way for others to shape the future of someone they care about</p>
+                <p class="tab-content-desc">CollegeAmerica allows family members, friends and even the beneficiary contribute to the account. While grandparents
+                  may opt to make Education part of their legacy, birthdays and baby showers are also a great way for others
+                  to shape the future of someone they care about</p>
               </article>
 
               <div class="row pl-5 mt-3">
                 <div class="col-sm-4">
                   <div class="gift-box">
-                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon" />
                     <h2 class="gift-box__title">1st Birthdays can raise an average of $5000 in contributions without gift-tax consequences.</h2>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="gift-box">
-                      <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon" />
                     <h2 class="gift-box__title">Grandparents can contribute up to $14,000 a year towards their grandkids education</h2>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="gift-box">
-                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon"/>
+                    <img class="gift-box__img" src="../assets/advisor-footer.png" alt="gift icon" />
                     <h2 class="gift-box__title">Family and friends can also collaborate by giving meaningful gifts for your child’s milestones.</h2>
                   </div>
                 </div>
@@ -255,7 +320,7 @@
         </div>
 
         <div class="tab-wrapper pt-5" id="plan-3">
-           plan 3
+          plan 3
         </div>
 
         <div class="tab-wrapper pt-5" id="plan-4">
@@ -266,7 +331,7 @@
           plan-5
         </div>
       </div>
-			
-		</div>
-	</div>
+
+    </div>
+  </div>
 </section>

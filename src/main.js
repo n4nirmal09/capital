@@ -12,15 +12,20 @@ import './utilities/slick.js'
 // Site script
 import siteScripts from './scripts/sitescripts'
 import graph from './scripts/graphscript'
-import {bannerSlider} from './scripts/planselectionscript'
-import {selectionTabs} from './scripts/planselectiontab'
+import { bannerSlider } from './scripts/planselectionscript'
+import './scripts/customselect'
+import { selectionTabs } from './scripts/planselectiontab'
+// import swiper from './scripts/gallerySlider'
+// import './scripts/gallerySlider'
+
+import './scripts/initCustomSelect'
 
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
-if(select('#circle-nav')) new bannerSlider()
+if (select('#circle-nav')) new bannerSlider()
 
-if(select('#plan-selection-slider')) new selectionTabs()
+if (select('#plan-selection-slider')) new selectionTabs()
 
 // intialize graph
 graph()

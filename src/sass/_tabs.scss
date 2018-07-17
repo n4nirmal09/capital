@@ -24,6 +24,10 @@
 
   &.active {
     opacity: 1;
+
+    > a {
+      color: #1862a1;
+    }
   }
 
   >a {
@@ -49,11 +53,17 @@
 }
 
 .gift-box {
+  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 50px 20px 30px 20px;
+  // display: flex;
+  text-align: center;
 
   &__img {
-    height: 20px;
+    height: 40px;
     width: auto;
-    margin: 0 0 10px 0;
+    // padding-top: 30px;
+    margin: 0 0 20px 0;
   }
 
   &__title {
