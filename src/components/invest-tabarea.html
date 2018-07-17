@@ -4,7 +4,7 @@
       ${require('html-loader?interpolate!./planselectionlinkslider.html')}
 
       <div class="tab-wrapper pt-5">
-        <div class="tab-links">
+        <div class="tab-links col-md-3">
           <ul class="list-unstyled">
             <li class="tab-link">
               <a href="#tab-1">
@@ -28,8 +28,7 @@
             </li>
           </ul>
         </div>
-        <div class="tab-contents">
-
+        <div class="tab-contents col-md-9">
           <div id="tab-1" class="active">
             <article class="pl-5">
               <h1 class="tab-content-heading">Secure their future,
@@ -63,11 +62,11 @@
             </div>
           </div>
           <div id="tab-3">
-            <article class="pl-5 text-left">
-              <h1 class="tab-content-heading">Meet parents like you</h1>
-              <p class="tab-content-desc">Ullamco aute aute cillum velit excepteur magna ex do eiusmod non enim irure id fugiat. Dolore nostrud commodo
-                incididunt tempor in id esse ex ut esse cupidatat ullamco pariatur sint velit dolore.</p>
-            </article>
+              <article class="pl-5 text-left">
+                <div class="mt-0">
+                  ${require('html-loader?interpolate!./carousels.html')}
+                </div>
+              </article>
           </div>
           <div id="tab-4">
             <article class="pl-5 text-left">

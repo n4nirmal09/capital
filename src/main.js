@@ -14,7 +14,7 @@ import siteScripts from './scripts/sitescripts'
 import graph from './scripts/graphscript'
 
 // import swiper from './scripts/gallerySlider'
-import './scripts/gallerySlider'
+// import './scripts/gallerySlider'
 
 import {bannerSlider} from './scripts/planselectionscript'
 import {selectionTabs} from './scripts/planselectiontab'
@@ -41,6 +41,7 @@ $('.carousel-slides').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    fade: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -67,3 +68,63 @@ $('.carousel-slides').slick({
       }
     ]
   });
+
+
+
+// Gallery Slider
+$('.carousel-slides1').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false
+      }
+    }
+  ]
+});
+
+
+//read-more in carousel-slides
+$('.carousel-slides .view-more').on('click', function () {
+    $('.read-more').toggleClass('expand');
+    if ($('.read-more').hasClass('expand')) {
+        $('.view-more').html('Read Less');
+    } else {
+        $('.view-more').html('Read More');
+    }
+});
+
+
+//read-more in carousel-slides1
+$('.carousel-slides1 .view-more').on('click', function () {
+  $('.read-more').toggleClass('expand');
+  if ($('.read-more').hasClass('expand')) {
+      $('.view-more').html('Read Less');
+  } else {
+      $('.view-more').html('Read More');
+  }
+});

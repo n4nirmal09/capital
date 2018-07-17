@@ -13,6 +13,8 @@
         object-fit: cover;
     }
 }
+
+.carousel-slides1,
 .carousel-slides{
     .slick-dots {
         list-style-type: none;
@@ -20,7 +22,8 @@
         align-items: center;
         left: 38%;
         position: absolute;
-        bottom: 37%;
+        // bottom: 37%;
+        bottom: calc(100% - 489px);
         text-align: center;
         li{
             margin-right: 0.7rem;
@@ -86,4 +89,24 @@ button.slick-prev.slick-arrow.slick-disabled {
 }
 button.slick-next.slick-arrow.slick-disabled {
     opacity: 0.5;
+}
+
+.read-more {
+    height: 55px;
+    overflow: hidden;
+}
+.read-more.expand {
+    height: auto;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus{
+    box-shadow: none;
 }
