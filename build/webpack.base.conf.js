@@ -144,6 +144,17 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
+     // Plan
+     new HtmlWebpackPlugin({
+      filename: 'plan-savings.html',
+      template: 'plan-savings.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
     // Plan Detailed
     new HtmlWebpackPlugin({
       filename: 'plan-detailed.html',

@@ -75,3 +75,35 @@
     border-bottom: 2px solid #f7f8fa;
 }
 
+
+// plans in savings borrow
+
+.clr-gray{
+    color: $gray-900;
+}
+
+.text-number{
+    font-size: 25px;
+    line-height: 35px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.numbers-list{
+    list-style-type: none;
+    position: relative;
+    .text-underline{
+        position: absolute;
+        height: 5rem;
+        top: 2%;
+        right: 11%;
+        background: #f7f8fa;
+        width: 2px;
+        span{
+            background: #fff;
+            position: relative;
+            top: 28%;
+            left: -4px;
+        }
+    }
+}
