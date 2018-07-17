@@ -31,7 +31,7 @@
     }
     p{
         font-size: 16px;
-        line-height: 24px;
+        line-height: 22px;
     }
 }
 
@@ -50,5 +50,28 @@
     transform: background-color 0.15s ease-in-out;
     a{
         color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
     }
 }
+
+
+// plan-tabarea-details info
+
+.testimonials-info{
+    border-left: 2px solid #f7f8fa;
+    padding-left: 2rem;
+}   
+.author{
+    color: $gray-900;
+}
+
+.claculator-custom{
+    font-size: 18px;
+    line-height: 55px;
+    font-weight: $font-weight-normal;
+    color: #110101;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #f7f8fa;
+}
+

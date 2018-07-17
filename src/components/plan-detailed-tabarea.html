@@ -13,7 +13,7 @@
         </div>
         <!-- cards info-->
         <div class="row">
-          <div class="col-md-4 card-info">
+          <div class="col-md-4 col-lg-3">
             <ul id="progressbar" class="progressbar">
               <li class="active">Establish Goal</li>
               <li>Understand your Numbers</li>
@@ -23,44 +23,38 @@
             </ul>
           </div>
           <!-- card2-->
-          <div class="col-md-8 card-info">
-            <fieldset class="step">
-              1
+          <div class="col-md-8 col-lg-9">
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plandetail-step1.html')}
               <button class="next btn btn-outline-primary" type="button">Next</button>
             </fieldset>
-            <fieldset class="step">
-              2
-
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plandetail-step1.html')}
               <button class="previous btn btn-outline-primary" type="button">Back</button>
               <button class="next btn btn-outline-primary" type="button">Next</button>
             </fieldset>
-            <fieldset class="step">
-              3
-
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plandetail-step1.html')} 3
               <button class="previous btn btn-outline-primary" type="button">Back</button>
               <button class="next btn btn-outline-primary" type="button">Next</button>
             </fieldset>
-            <fieldset class="step">
-              4
-
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plandetail-step1.html')}
               <button class="previous btn btn-outline-primary" type="button">Back</button>
               <button class="next btn btn-outline-primary" type="button">Next</button>
             </fieldset>
-            <fieldset class="step">
-              5
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plandetail-step1.html')}
               <button class="previous btn btn-outline-primary" type="button">Back</button>
               <button class="btn btn-outline-primary" type="submit">Submit</button>
 
             </fieldset>
-          </div>
 
+          </div>
+          <!-- cards info end-->
         </div>
 
       </div>
-      <!-- cards info end-->
-
     </div>
-
-  </div>
   </div>
 </section>
