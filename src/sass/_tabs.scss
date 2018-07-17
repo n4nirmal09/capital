@@ -11,8 +11,8 @@
 	}
 }
 
-.tab-links
-{
+.tab-links {
+  transition: all 0.5s ease;
 	border-right: 5px solid fade-out($secondary, 0.9);
 	> ul{
 		margin: 0;
@@ -20,6 +20,12 @@
 }
 
 .tab-link {
+  opacity: 0.6;
+
+  &.active {
+    opacity: 1;
+  }
+
   >a {
     display: block;
     width: 100%;
