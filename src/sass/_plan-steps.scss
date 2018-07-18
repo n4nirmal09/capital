@@ -90,14 +90,24 @@
 .table-checkbox {
     input {
         opacity: 0;
+        position: absolute;
+        left: -9999px;
     }
 
-
-
     position: relative;
+    left: -1rem;
 
     .checkmark {
         position: relative;
+        cursor: pointer;
+        
+        img {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            opacity: 0;
+        }
+        
         &:before {
             position: absolute;
             content: '';
@@ -110,4 +120,38 @@
         }
 
     }
+
+    input[type="checkbox"]:checked + .checkmark {
+
+        &:before {
+            border: 2px solid $theme-primary;
+        }
+
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+.selectable-table {
+    border: 0;
+}
+
+.selectable-table .cg-table-list {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
+    &.selected {
+        border: 2px solid $theme-primary;
+        .checkmark {
+            &:before {
+                border: 2px solid $theme-primary;
+            }
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
 }
