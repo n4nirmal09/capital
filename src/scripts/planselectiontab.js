@@ -9,8 +9,9 @@ export const selectionTabs = function () {
 }
 
 function moveSlider (activeNode) {
-	let offsetX = activeNode.offsetLeft + activeNode.clientWidth/3
-	TweenLite.to(select('.slider'),0.5,{x: offsetX})
+	let slider = select('.slider')
+	let offsetX = activeNode.offsetLeft + activeNode.clientWidth/2 - slider.clientWidth/2
+	TweenLite.to(slider,0.5,{x: offsetX})
 }
 
 function reset () {
@@ -36,7 +37,7 @@ selectionTabs.prototype = {
 
 		this.links.forEach(link => {
 			if(link.classList.contains('active')){
-				TweenLite.set(this.slider,{x: link.offsetLeft + link.clientWidth/3})
+				TweenLite.set(this.slider,{x: link.offsetLeft + link.clientWidth/2 - this.slider.clientWidth/2})
 			}
 		})
 	},

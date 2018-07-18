@@ -74,3 +74,26 @@
     margin-right: 10px;
   }
 }
+
+.tab-wrapper.sub-tabs{
+  .tab-links{
+    border: none;
+    max-width: 300px;
+    flex-basis:300px;
+
+  }
+  
+  .tab-link{
+    > a{
+      font-size: calculateRem(14px, $font-size-html)
+    
+    }
+    + .tab-link{
+      margin-top: 8px;
+    }
+  }
+  .tab-link-title
+  {
+    font-size: calculateRem(18px, $font-size-html)
+  }
+}
