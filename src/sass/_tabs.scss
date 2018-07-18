@@ -27,6 +27,7 @@
 
     > a {
       color: #1862a1;
+      font-weight: 700;
     }
   }
 
@@ -37,7 +38,7 @@
     font-size: calculateRem(16px, $font-size-html);
     padding: 5px 30px;
     line-height: 1.3;
-    font-weight: 700;
+    // font-weight: 700;
   }
 
   + .tab-link{

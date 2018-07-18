@@ -1,5 +1,5 @@
 import $ from 'jquery'
-$(document).ready(function(){
+$(document).ready(function () {
 	var findClass = $("#main-content").find('.plan-selection-links li:first-child').hasClass('active');
 	console.log(findClass);
 	// if(findClass) {
@@ -8,9 +8,9 @@ $(document).ready(function(){
 	// }
 	$("#exampleModalLong").hide();
 	$("#modal-overlay").removeClass('active');
-	$(".selection-link a").click(function(e){
+	$(".selection-link a").click(function (e) {
 		e.preventDefault();
-		if(findClass) {
+		if (findClass) {
 			$("#exampleModalLong").hide();
 			$("#modal-overlay").removeClass('active');
 		}
@@ -18,7 +18,7 @@ $(document).ready(function(){
 		$(this).parents("#main-content").find("#exampleModalLong").show();
 		$("#modal-overlay").addClass('active');
 	})
-	$(".close-popup").click(function(e){
+	$(".close-popup").click(function (e) {
 		e.preventDefault();
 		$("#exampleModalLong").hide();
 		$("#modal-overlay").removeClass('active');
