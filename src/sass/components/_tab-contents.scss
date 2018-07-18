@@ -16,7 +16,8 @@
 
 
 .tab-content-heading {
-  font-size: 45px;
+
+  @include fonts(24px, 30px, 34px);
   font-weight: 700;
   color: #110101;
   letter-spacing: -0.45px;

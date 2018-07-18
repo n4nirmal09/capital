@@ -9,7 +9,13 @@
 	list-style-type: none;
 	// width: ;
 	float: left;
-  position: relative;
+	position: relative;
+	opacity: 0.8;
+
+	&.active {
+		opacity: 1;
+		font-weight: 700;
+	}
   @media (min-width: $screen-md) {
     height: 60px;
     float: none;

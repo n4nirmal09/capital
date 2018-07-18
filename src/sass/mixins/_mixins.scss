@@ -457,3 +457,20 @@
   &::-moz-placeholder          {color : $color;opacity : 1}
   &:-ms-input-placeholder      {color : $color;opacity : 1} 
 }
+
+// Fonts
+
+@mixin fonts($sm, $md, $lg) {
+  font-size: $sm;
+  line-height: $sm + 10;
+  
+  @media (min-width: $screen-md) {
+    font-size: $md;
+    line-height: $md + 10;
+  }
+  
+  @media (min-width: $screen-lg) {
+    font-size: $lg;
+    line-height: $lg + 10;
+  }
+}
