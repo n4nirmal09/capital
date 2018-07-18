@@ -1,4 +1,8 @@
   import ScrollMagic from 'ScrollMagic'
+  import $ from 'jquery'
+  $('.carousel-slides').slick({
+    slidesToShow: 2
+  })
 
   var s, NF = {
         init: function() {
@@ -8,10 +12,11 @@
             this.scrollDierectionChecker()
             this.smoothScrolling()
             this.resizeListner()
-            this.scrollBarWidth() 
+            this.scrollBarWidth()
             this.removeMethod()
             this.tabs()
             this.accordian()
+            this.hamburger()
             //this.headerScrollOut()
             //this.contentSlider();
         },
@@ -22,7 +27,7 @@
             desktop: 1200,
             tab: 1024,
             mobile: 768,
-            scrollClassTrigger: 100, 
+            scrollClassTrigger: 100,
             windowWidth: window.innerWidth,
             windowheight: window.innerHeight,
             scrollBarWidth: 0
@@ -39,7 +44,7 @@
           }
         },
         detectIe : function(){
-               
+
               var ua = window.navigator.userAgent;
 
               var msie = ua.indexOf('MSIE ');
@@ -52,21 +57,21 @@
               if (trident > 0) {
                   // IE 11 => return version number
                   var rv = ua.indexOf('rv:');
-                  return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10); 
+                  return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
               }
 
               var edge = ua.indexOf('Edge/');
               if (edge > 0) {
                  // Edge (IE 12+) => return version number
-                 return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10); 
+                 return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
               }
 
               // other browser
               return false;
-          
+
         },
 
-        // ResizeListner 
+        // ResizeListner
         resizeListner: function() {
             window.addEventListener("resize", function() {
                 s.windowheight = window.innerHeight;
@@ -74,14 +79,14 @@
 
                 //NF.windowheight();
             });
-            
+
         },
 
         //scroll listener
         scrollListener () {
-          
+
           const scrollFunction = () => {
-            
+
           }
 
           window.onscroll = scrollFunction
@@ -109,9 +114,20 @@
             body.style.height = s.windowheight + 'px';
         },
 
+        hamburger: function() {
+          let menus = selectAll('.hamburger-menu')
+          menus.forEach(menu => {
+            menu.addEventListener("click", () => {
+              let target = menu.dataset.target
+              select('#' + target).classList.toggle('active')
+            })
+          })
+
+        },
+
         // Adding scroll class
         scrollDierectionChecker: function() {
-            
+
             function scrollCheck(){
                 if(window.scrollY > s.scrollClassTrigger){
                     document.querySelector('body').classList.add('scrolled');
@@ -122,7 +138,7 @@
             function scrollDirCheck(e){
                 var delta = ((e.deltaY || -e.wheelDelta || e.detail) >> 10) || 1;;
                 if (delta > 0) {
-                    
+
                     document.querySelector('body').classList.remove('scrolling-up');
                     document.querySelector('body').classList.add('scrolling-down');
                 } else {
@@ -130,11 +146,11 @@
                     document.querySelector('body').classList.add('scrolling-up');
                 }
             }
-            
-            window.onscroll = function(){scrollCheck()};
-            window.addEventListener('mousewheel', scrollDirCheck);
-            window.addEventListener('DOMMouseScroll', scrollDirCheck);
-           
+
+            // window.onscroll = function(){scrollCheck()};
+            // window.addEventListener('mousewheel', scrollDirCheck);
+            // window.addEventListener('DOMMouseScroll', scrollDirCheck);
+
         },
 
 
@@ -164,9 +180,9 @@
 
             s.scrollBarWidth = widthNoScroll - widthWithScroll;
 
-            
+
         },
-        
+
 
         smoothScrolling: function() {
               /* Smooth scroll */
@@ -210,7 +226,7 @@
               window.addEventListener("mousewheel", MouseWheelHandler, false);
               window.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
               })();
-            
+
         },
 
         removeMethod : function(){
@@ -279,7 +295,7 @@
                     this.classList.add('active')
                     TweenLite.to(panel,0.8, {overwrite:"all", maxHeight: panel.scrollHeight, ease: Power3.easeInOut})
                   }
-                  
+
                 })
               })
 

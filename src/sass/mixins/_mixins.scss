@@ -79,8 +79,20 @@
   }
 }
 
-@mixin bd-bw($from,$to){
+@mixin bd-bw ($from,$to) {
    @media screen and (min-width: $from) and (max-width: $to - 1){
+    @content;
+  }
+}
+
+@mixin bd-float-bp-min  { 
+  @media screen and (min-width: $grid-float-breakpoint){
+    @content;
+  }
+}
+
+@mixin bd-float-bp-max {
+  @media screen and (max-width: $grid-float-breakpoint - 1){
     @content;
   }
 }

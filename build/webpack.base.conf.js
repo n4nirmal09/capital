@@ -124,8 +124,30 @@ module.exports = {
     }),
     // Plan
     new HtmlWebpackPlugin({
+      filename: 'plan-index.html',
+      template: 'plan-index.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+    // Plan
+    new HtmlWebpackPlugin({
       filename: 'plan.html',
       template: 'plan.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+     // Plan
+     new HtmlWebpackPlugin({
+      filename: 'plan-savings.html',
+      template: 'plan-savings.html',
       inject: true,
       minify: {
         removeComments: false,
