@@ -48,7 +48,6 @@ if (select('#circle-nav')) new bannerSlider()
 if (select('#plan-selection-slider')) new selectionTabs()
 
 
-
 // intialize graph
 graph()
 
@@ -66,3 +65,13 @@ $('.selectable-table .cg-table-list').on('click', function () {
 	$('.selectable-table .cg-table-list').removeClass('selected');
 	$(this).addClass('selected');
 });
+
+$(function () {
+    $('.custom-tab-links a').on('click', function (e) {
+        e.preventDefault();
+        $('.custom-tab-inner').removeClass('active');
+        $('.custom-tab-link').removeClass('active');
+        $(this).addClass('active');
+        $($(this).attr('href')).addClass('active');
+    });
+})

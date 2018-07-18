@@ -98,3 +98,20 @@
     font-size: calculateRem(18px, $font-size-html)
   }
 }
+
+.custom-tab {
+&-inner {
+display: none;
+
+&.active {
+display: block;
+}
+}
+
+&-link {
+color: #333333;
+&.active {
+color: $theme-primary;
+}
+}
+}
