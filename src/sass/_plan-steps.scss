@@ -1,0 +1,55 @@
+.form-control.md {
+    font-size: 18px !important;
+    line-height: 28px;
+}
+
+.fnt-bold.md {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.plan-table {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid rgba(0,0,0,0.2);
+
+    li {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+    }
+
+    .content {
+        padding-right: 1rem;
+    }
+}
+
+.back-next-container {
+    width: 100%;
+
+    .next,
+    .inner-next {
+        float: right;
+    }
+    .previous,
+    .inner-previous {
+        float: left;
+    }
+}
+
+.w-auto {
+    width: auto!important;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+

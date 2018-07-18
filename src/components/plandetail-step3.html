@@ -1,57 +1,12 @@
+<!-- row -->
 <div class="row">
-  <!-- Calculate-info-->
+  <!-- Calculate-info middle section -->
   <div class="col-lg-8 pr-3 pr-md-4">
-    <!-- heading info-->
-    <h1 class="tab-content-heading">How much can I really afford?</h1>
-    <h1 class="tab-content-heading">It might seem like a big number now, but let us help you break it down.</h1>
-    <!-- calculate details-info-->
-    <div class="row mx-0">
-      <div class="col-md-6">
-        Household income
-      </div>
-      <div class="col-md-6">
-        <input type="text" value="$150,000">
-        <i class=""></i>
-      </div>
-    </div>
-    <div class="row mx-0">
-      <div class="col-md-6">
-        Monthly expenses
-      </div>
-      <div class="col-md-6">
-        <input type="text" value="$3,000">
-        <i class=""></i>
-      </div>
-    </div>
-    <!-- Plan table -->
-    <div class="row mx-0">
-      <ul class="col-md-8 plan-table">
-        <li>
-          <div class="content">
-            <h3>Safe to save</h3>
-            <p>This is the amount you could be saving today monthly while still covering your costs!</p>
-
-          </div>
-          <div class="price">
-            <h2>$250</h2>
-          </div>
-        </li>
-        <li>
-          <div class="content">
-            <p>At this pace, your gap will be of</p>
-          </div>
-          <div class="price">
-            <h2>$70,000</h2>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- Back next button -->
-    <div class="row mx-0 back-next-container">
-      <button class="inner-previous btn btn-outline-primary" type="button">Back</button>
-      <button class="inner-next btn btn-outline-primary" type="button">Next</button>
-    </div>
+    <!-- inner steps -->
+     ${require('html-loader?interpolate!./plandetail-createplan-step1.html')}
+     ${require('html-loader?interpolate!./plandetail-createplan-step2.html')}
   </div>
+  <!-- end of calculate-info middle section -->
   <!-- clients testimonials-->
   <div class="col-lg-4 testimonials-info">
     <span class="d-block mb-3 mb-md-4">We have helped over 1,000,000 parents like you pay for their kids education!</span>
@@ -65,3 +20,4 @@
     </blockquote>
   </div>
 </div>
+<!-- end of row -->
