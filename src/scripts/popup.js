@@ -1,13 +1,7 @@
 import $ from 'jquery'
-$(document).ready(function(){
-	// var findClass = $("#main-content").find('.plan-selection-links li:first-child').hasClass('active');
-	// console.log(findClass);
-	// if(findClass) {
-	// 	$("#exampleModalLong").show();
-	// 	$("#modal-overlay").addClass('active');
-	// }
-	// $("#exampleModalLong").hide();
-	// $("#modal-overlay").removeClass('active');
+
+$(document).ready(function () {
+
 	$(".selection-link").click(function(e){
 		e.preventDefault();
 		if($("#main-content").find('.plan-selection-links li').first()) {
@@ -18,7 +12,7 @@ $(document).ready(function(){
 		// $(this).parents("#main-content").find("#exampleModalLong").show();
 		$("#modal-overlay").addClass('active');
 	})
-	$(".close-popup").click(function(e){
+	$(".close-popup").click(function (e) {
 		e.preventDefault();
 		$("#exampleModalLong").hide();
 		$("#modal-overlay").removeClass('active');
