@@ -2,56 +2,21 @@
   <!-- Calculate-info-->
   <div class="col-lg-8 pr-3 pr-md-4">
     <!-- heading info-->
-    <h1 class="tab-content-heading">The Simple Planning Tool</h1>
+    <h1 class="tab-content-heading">Results</h1>
     <!-- calculate details-info-->
 
     <div class="row mx-0">
-      <div class="col-md-4 mt-3">
-        <label for="" class="d-block">Child's Age</label>
-        <select class="ui dropdown w-100">
-          <option value="">0</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-        </select>
+      <div class="col-12">
+        ${require('html-loader?interpolate!./graph.html')}
+        <p>You will reach your milestone goal of $20,000 for the first semester of college 3 years sooner if you invest $10
+          more.
+        </p>
       </div>
-      <div class="col-md-4 mt-3">
-        <label for="" class="d-block">Household Income</label>
-        <select class="ui dropdown w-100">
-          <option value="">$100,00</option>
-          <option value="">$200,00</option>
-          <option value="">$300,00</option>
-        </select>
+
+      <div class="back-next-container float-right mt-3">
+        <button class="btn btn-outline-primary float-right" type="button">Start Investing Now</button>
+        <!-- <button class="next btn btn-outline-primary" type="button">Next</button> -->
       </div>
-      <div class="col-md-4 mt-3">
-        <label for="" class="d-block">Monthly Contribution</label>
-        <select class="ui dropdown w-100">
-          <option value="">$165</option>
-          <option value="">$180</option>
-        </select>
-      </div>
-      <div class="col-md-6 mt-3">
-        <label for="" class="d-block">Type of schoold</label>
-        <select class="ui dropdown w-100">
-          <option value="">4 year private schoold</option>
-          <option value="">3 year private school</option>
-          <option value="">2 year gov school</option>
-        </select>
-      </div>
-      <div class="col-md-6 mt-3">
-        <label for="" class="d-block">Type of university</label>
-        <select class="ui dropdown w-100">
-          <option value="">Standform</option>
-          <option value="">MIT</option>
-        </select>
-      </div>
-      <div class="col-12 mt-5">
-        <!-- ${require('html-loader?interpolate!./graph.html')} -->
-      </div>
-    </div>
-    <div>
-      <button class="previous btn btn-outline-primary" type="button">Back</button>
-      <!-- <button class="next btn btn-outline-primary" type="button">Next</button> -->
     </div>
   </div>
   <!-- clients testimonials-->
