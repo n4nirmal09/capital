@@ -30,6 +30,7 @@ import { selectionTabs } from './scripts/planselectiontab'
 import './scripts/progressbar'
 
 import './scripts/initCustomSelect'
+import './scripts/yearAddCustomSelect'
 
 // popup js
 import './scripts/popup'
