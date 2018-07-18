@@ -82,6 +82,13 @@
     color: $gray-900;
 }
 
+.main-content-wrapper{
+    .tab-content-heading{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
 .text-number{
     font-size: 25px;
     line-height: 35px;
@@ -104,6 +111,29 @@
             position: relative;
             top: 28%;
             left: -4px;
+        }
+    }
+}
+
+// accordian link info
+
+.panel-links{
+    display: flex;
+    flex-direction: column;
+    .accordian-trigger{
+      border: 1px solid #e8e7e7;
+      padding: 1.2rem;
+      color: #333333;
+      border-radius: 4px;
+      &:hover{
+        text-decoration: none;
+        background: #e4e4e4;
+      } 
+        &:after{
+            height: 10px;
+            width: 10px;
+            right: 20px;
+            transform: rotateZ(225deg);
         }
     }
 }
