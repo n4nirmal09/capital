@@ -49,6 +49,11 @@ if (select('#plan-selection-slider')) new selectionTabs()
 // intialize graph
 graph()
 
+$('.selection-link').on('click', function(){
+	console.log('show');
+	graph()
+});
+
 // $('.dropdown').dropdown()
 
 import "@/sass/main.scss"
