@@ -36,9 +36,9 @@ import './scripts/initCustomSelect'
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
-if(window.innerWidth > 992){
-	if(select('#circle-nav')) new bannerSlider()
-}
+
+if(select('#circle-nav')) new bannerSlider()
+
 
 if (select('#plan-selection-slider')) new selectionTabs()
 
