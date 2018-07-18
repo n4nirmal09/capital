@@ -10,7 +10,7 @@
             this.select()
             this.selectAll()
             this.scrollDierectionChecker()
-            this.smoothScrolling()
+            //this.smoothScrolling()
             this.resizeListner()
             this.scrollBarWidth()
             this.removeMethod()
