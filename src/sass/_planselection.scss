@@ -136,4 +136,9 @@
 	{
 		display: none;
 	}
+	&__underline{
+		a:hover{
+			text-decoration: none; 
+		}
+	}
 }

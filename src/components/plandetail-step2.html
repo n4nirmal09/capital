@@ -2,54 +2,83 @@
   <!-- Calculate-info-->
   <div class="col-lg-8 pr-3 pr-md-4">
     <!-- heading info-->
-    <h1 class="tab-content-heading">Let us help you break down the big number</h1>
-    <!-- calculate details-info-->
-    <h6 class="claculator-custom">
-      My
-      <div class="form-check form-check-inline mx-2">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Son">
-        <label class="form-check-label" for="inlineRadio1">Son</label>
+    <h1 class="tab-content-heading mb-2">Let us help you break down the big number</h1>
+    <p class="fnt-md">Based on the information you have input, this is an estimate
+      of your funding goal</p>
+    <!-- calculate details-info tabs-->
+    <div class="plan-selection-tabs plan-selection-tabs__underline pt-3">
+      <p class="fnt-md fnt-bold">I want to cover his education</p>
+      <div class="tab-wrapper flex-column  active" id="plan-1">
+        <div class="border-0">
+          <ul class="d-flex list-unstyled tabs-list-info">
+            <li class="tab-link active">
+              <a href="#tab-1">
+                <strong>Fully</strong>
+              </a>
+            </li>
+            <li class="tab-link mt-0">
+              <a href="#tab-2">
+                <strong>Partially</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- tab-content --> 
+        <div class="tab-contents mb-4 mb-md-5">
+          <div id="tab-1" class="active tab-border px-1 py-3 text-center">
+            <div class="d-flex">
+            <!--left-wrapper-->
+            <div class="col-md-6">
+              <div class="tab-border__content">
+                <span class="fnt-xlg theme-primary">$390,000</span>
+                <p class="m-0">100% of ideal savings</p>
+              </div>
+            </div>
+            <!--Right-wrapper-->
+            <div class="col-md-6">
+              <div class="tab-border__content">
+                  <span class="fnt-xlg clr-gray">$1,000/month</span>
+                  <p class="m-0">Monthly contribution</p>
+                </div>
+            </div>
+            </div>
+          </div>
+          <!-- partially-->
+          <div id="tab-2">
+            <h6 class="claculator-custom claculator-custom--lg-dp pb-3 border-0">
+                By covering <select class="ui search dropdown">
+                    <option value="">30%</option>
+                    <option value="AL">40%</option>
+                    <option value="AK">50%</option>
+                    <option value="CO">60%</option>
+                  </select>
+                  of the total costs of their education.
+            </h6>
+            <div class="d-flex tab-border px-1 py-3 text-center">
+            <!--left-wrapper-->
+            <div class="col-md-6">
+                <div class="tab-border__content">
+                  <span class="fnt-xlg theme-primary">$1,95,000</span>
+                  <p class="m-0">100% of ideal savings</p>
+                </div>
+              </div>
+              <!--Right-wrapper-->
+              <div class="col-md-6">
+                <div class="tab-border__content">
+                    <span class="fnt-xlg clr-gray">$500/month</span>
+                    <p class="m-0">Monthly contribution</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="form-check-inline ml-1">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Daughter">
-        <label class="form-check-label" for="inlineRadio2">Daughter</label>
-      </div>
-      <br> is
-      <select class="ui search dropdown">
-        <option value="">00</option>
-        <option value="AL">01</option>
-        <option value="AK">02</option>
-        <option value="CO">03</option>
-      </select>
-      years old and has
-      <select class="ui search dropdown">
-        <option value="">00</option>
-        <option value="AL">01</option>
-        <option value="AK">02</option>
-        <option value="CO">03</option>
-      </select>
-      Silblings.
-    </h6>
-    <h6 class="claculator-custom claculator-custom--lg-dp mt-2 mt-md-3 border-bottom-0">
-      When I think about my son’s education, I would like to give him the opportunity to
-      <select class="ui search dropdown">
-        <option value="">Attend a year private school</option>
-        <option value="AL">Attend a 2 year private school</option>
-        <option value="AK">Attend a 3 year private school</option>
-        <option value="CO">Attend a 4 year private school</option>
-      </select>
-      <br> like
-      <select class="ui search dropdown">
-        <option value="">Stanford University</option>
-        <option value="AL">Oxford University</option>
-        <option value="AK">Anna University</option>
-        <option value="CO">Stanford University</option>
-      </select>
-    </h6>
-    <div>
-      <button class="previous btn btn-outline-primary" type="button">Back</button>
-      <button class="next btn btn-outline-primary" type="button">Next</button>
-    </div>
+  </div>
+  <div>
+    <button class="previous btn btn-outline-primary" type="button">Back</button>
+    <button class="next btn btn-outline-primary" type="button">Next</button>
+  </div>
   </div>
   <!-- clients testimonials-->
   <div class="col-lg-4 testimonials-info">
