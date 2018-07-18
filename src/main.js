@@ -33,6 +33,8 @@ import './scripts/initCustomSelect'
 
 // popup js
 import './scripts/popup'
+// slick slider
+import './scripts/slick-init'
 
 
 // Site basic scripts
