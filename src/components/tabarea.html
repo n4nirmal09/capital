@@ -335,20 +335,21 @@
                     </form>
                       <div class="d-block mt-3">
                         <select class="ui search dropdown w-50">
-                          <option value="today">today</option>
+                          <option value="today">Today</option>
                           <option value="2016">2016</option>
                           <option value="2016">2017</option>
                         </select>
                       </div>
                   </div>
                 </div>
-                <div class="row mt-2">
-                  <div class="col-sm-3 mt-4">
+                <div class="row mt-4">
+                  <div class="col-sm-3 mt-5">
                     <h3 class="fw-light">TOTAL SAVING</h3>
                     <p class="graph-detail-heading">$120/mo</p>
                   </div>
-                  <div class="col-sm-9">
-                    Graph
+                  <div class="col-sm-7">
+                    <div id="having-child-graph">
+                    </div>
                   </div>
                 </div>
                 ${require('html-loader?interpolate!./graph.html')}
