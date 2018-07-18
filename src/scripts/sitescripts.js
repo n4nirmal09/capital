@@ -147,9 +147,9 @@
                 }
             }
 
-            // window.onscroll = function(){scrollCheck()};
-            // window.addEventListener('mousewheel', scrollDirCheck);
-            // window.addEventListener('DOMMouseScroll', scrollDirCheck);
+            window.onscroll = function(){scrollCheck()};
+            window.addEventListener('mousewheel', scrollDirCheck);
+            window.addEventListener('DOMMouseScroll', scrollDirCheck);
 
         },
 
