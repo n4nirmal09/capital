@@ -1,5 +1,14 @@
 .plan-selection-links
 {
+	&.slider-pagination
+	{
+		ul {
+			justify-content: space-between;
+			> li{
+				flex: none;
+			}
+		}
+	}
 	>ul{
 		list-style: none;
 		margin:0;

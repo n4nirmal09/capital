@@ -70,11 +70,11 @@ bannerSlider.prototype = {
 		this.slides.forEach(slide => {
 			let slideItems = slide.children
 			tl.from(slide,0.2,{autoAlpha: 0}, slide.id)
-			.staggerFrom(slideItems,0.5,{
+			.staggerFrom(slideItems,0.2,{
 				autoAlpha: 0,
 				//y: 100,
 			}, 0, slide.id)
-			.staggerTo(slideItems,0.5,{
+			.staggerTo(slideItems,0.2,{
 				//delay: this.slideDelay,
 				//y: 100,
 				autoAlpha: 0
