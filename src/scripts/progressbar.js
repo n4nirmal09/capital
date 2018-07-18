@@ -7,10 +7,12 @@ var current_fs, next_fs, previous_fs; //fieldsets
 $(".next").click(function () {
   current_fs = $(this).closest('.step');
   next_fs = $(this).closest('.step').next();
+  previous_fs = $(this).closest('.step').prev();
 
   //activate next step on progressbar using the index of next_fs
   $(".progressbar li").eq($(".step").index(next_fs)).addClass("active");
   $(".progressbar li").eq($(".step").index(current_fs)).removeClass("active");
+  $(".progressbar li").eq($(".step").index(current_fs)).addClass("completed");
 
   //show the next fieldset
   next_fs.show();
