@@ -276,3 +276,42 @@
 	-moz-transition-delay: 0s;
 	transition-delay: 0s;
 }
+
+#yearAddPlan-form {
+    display: flex;
+  .cg-field {
+    display: block;
+    margin-bottom: 1rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 1.4rem;
+    }
+	}
+	.cg-field-toggle {
+		position: relative;
+    font-size: 1.5rem;
+    padding: 1rem 3rem 1rem 1rem;
+		&:after {
+			position: absolute;
+			content: '';
+			right: 1rem;
+			top: 50%;
+			transform: translate(0, -50%);
+			background: url('../assets/icon-dropdown.png') center center no-repeat;
+			background-size: contain;
+			width: 18px;
+			height: 18px;
+		}
+	}
+	.cg-field.cg-dd {
+			margin-right: 1rem;
+	}
+}	
+.form-control:disabled, .form-control[readonly] {
+	background-color: transparent !important;
+	opacity: 1;
+}
+
+.input-xs {
+	width: 120px;
+}
