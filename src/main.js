@@ -4,7 +4,6 @@ import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
 import './utilities/modernizr'
 import $ from 'jquery'
-
 // Semantic Ui
 // import 'semantic-ui-popup/popup.css'
 // $.fn.popup = require('semantic-ui-popup')
@@ -32,12 +31,15 @@ import './scripts/progressbar'
 
 import './scripts/initCustomSelect'
 
+// popup js
+import './scripts/popup'
+
 
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
 
-if(select('#circle-nav')) new bannerSlider()
+if (select('#circle-nav')) new bannerSlider()
 
 
 if (select('#plan-selection-slider')) new selectionTabs()
@@ -50,3 +52,9 @@ graph()
 // $('.dropdown').dropdown()
 
 import "@/sass/main.scss"
+
+
+$('.selectable-table .cg-table-list').on('click', function () {
+	$('.selectable-table .cg-table-list').removeClass('selected');
+	$(this).addClass('selected');
+});
