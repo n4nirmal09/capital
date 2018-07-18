@@ -22,7 +22,8 @@ import './utilities/slick.js'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
-import graph from './scripts/graphscript'
+// import graph from './scripts/graphscript'
+import './scripts/graphscript'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'
@@ -47,7 +48,7 @@ if (select('#plan-selection-slider')) new selectionTabs()
 
 
 // intialize graph
-graph()
+// graph()
 
 // $('.dropdown').dropdown()
 
@@ -58,3 +59,17 @@ $('.selectable-table .cg-table-list').on('click', function () {
 	$('.selectable-table .cg-table-list').removeClass('selected');
 	$(this).addClass('selected');
 });
+
+// $(fuction(){
+// })
+
+$(function () {
+	$('.custom-tab-links a').on('click', function (e) {
+		e.preventDefault();
+		$('.custom-tab-inner').removeClass('active');
+		$('.custom-tab-link').removeClass('active');
+		$(this).addClass('active');
+		$($(this).attr('href')).addClass('active');
+	});
+})
+
