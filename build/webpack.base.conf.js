@@ -122,10 +122,54 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
-    // Grow
+    // Plan
+    new HtmlWebpackPlugin({
+      filename: 'plan-index.html',
+      template: 'plan-index.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+    // Plan
     new HtmlWebpackPlugin({
       filename: 'plan.html',
       template: 'plan.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+     // Plan
+     new HtmlWebpackPlugin({
+      filename: 'plan-savings.html',
+      template: 'plan-savings.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+    // Plan Detailed
+    new HtmlWebpackPlugin({
+      filename: 'plan-detailed.html',
+      template: 'plan-detailed.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
+    }),
+    // Plan Detailed
+    new HtmlWebpackPlugin({
+      filename: 'simple-planning.html',
+      template: 'simple-planning.html',
       inject: true,
       minify: {
         removeComments: false,

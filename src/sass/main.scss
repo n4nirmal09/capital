@@ -1,9 +1,15 @@
 @import "./variables",
 		"./mixins/mixins",
 		"./functions/functions",
+		"./components/graph",
+		"./components/banner",
+		"./components/formdrop",
 		"./components/footer",
 		"./components/inputs",
 		"./components/table",
+		"./components/customselect",
+		"./components/gallerySlider",
+		"./components/progressbar",
 		"./components/tab-contents";
 
 /* Bootstrap Custom*/
@@ -16,4 +22,5 @@
 		"./planselection",
 		"./tabs",
 		"./testimonial",
-		"./accordian";
+		"./accordian",
+		"./plans-newborn";

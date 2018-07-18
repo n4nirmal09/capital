@@ -1,0 +1,278 @@
+
+/* general style for the form */
+.cg-form {
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 28px;
+
+  @media (min-width: $screen-md) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.cg-form ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* normalize the input elements, make them look like everything else */
+.cg-form input,
+.cg-form select,
+.cg-form button {
+	border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.cg-form input:focus {
+	outline: none;
+}
+
+/* custom field (drop-down, text element) styling  */
+.cg-field {
+	display: inline-block;
+	position: relative;
+}
+
+#savingPlan-form {
+  .cg-field {
+    display: block;
+    margin-bottom: 1rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 1.4rem;
+    }
+  }
+}
+
+.cg-field.cg-field-open {
+	z-index: 10000;
+}
+
+/* the toggle is the visible part in the form */
+.cg-field-toggle,
+.cg-form input,
+.cg-form select  {
+	line-height: inherit;
+	display: inline-block;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+#savingPlan-form {
+  .cg-field-toggle,
+  .cg-form input,
+  .cg-form select  {
+    padding: 1rem 4rem 1rem 1rem;
+  }
+}
+
+.cg-field-toggle {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: url('../assets/icon-dropdown.png') center center no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* drop-down list / text element */
+.cg-field ul {
+	position: absolute;
+	visibility: hidden;
+  background: #fff;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+	left: -0.5em;
+	top: 50%;
+	font-size: 80%;
+	opacity: 0;
+	transform: translateY(-40%) scale(0.9);
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.cg-field.cg-field-open ul {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(-50%) scale(1);
+	transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
+}
+
+.cg-field ul li {
+	position: relative;
+}
+
+.cg-dd ul li {
+	padding: 1rem 2rem;
+	cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $theme-primary;
+    color: #ffffff;
+  }
+}
+
+.cg-dd ul li.cg-dd-checked {
+  color: $theme-primary;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.no-touch .cg-dd ul li:hover {
+  background: $theme-primary;
+  color: #ffffff;
+}
+
+.no-touch .cg-dd ul li:hover:active {
+	color: #478982;
+}
+
+
+.cg-ti-text ul {
+	min-width: 8em;
+}
+
+.cg-ti-text ul li.cg-ti-input input {
+	width: 100%;
+	padding: 0.2em 2em 0.2em 0.5em;
+	border-bottom: none;
+	color: #fff;
+}
+
+.cg-form .cg-field-go {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	cursor: pointer;
+	background: rgba(0,0,0,0.1);
+	width: 1.8em;
+	text-align: center;
+	color: transparent;
+}
+
+
+/* custom placeholder color */
+// input::-webkit-input-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
+
+// input:active::-webkit-input-placeholder ,
+// input:focus::-webkit-input-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
+
+// input::-moz-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
+
+// input:active::-moz-placeholder,
+// input:focus::-moz-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
+
+// input:-ms-input-placeholder {
+// 	color: rgba(255,255,255,0.8);
+// }
+
+// input:active::-ms-input-placeholder ,
+// input:focus::-ms-input-placeholder {
+// 	color: rgba(255,255,255,0.2);
+// }
+
+/* example field below text input */
+.cg-ti-text ul li.cg-ti-example {
+	font-size: 40%;
+	font-style: italic;
+	font-weight: 400;
+	padding: 0.4em 1em;
+	color: rgba(0,0,0,0.2);
+	border-top: 1px dashed rgba(255,255,255,0.7);
+}
+
+.cg-ti-text ul li.cg-ti-example em {
+	color: #fff
+}
+
+/* submit button */
+.cg-submit-wrap {
+	margin-top: 0.4em;
+}
+
+.cg-form .cg-submit {
+	line-height: 3;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	background: #76C3BD;
+	color: #fff;
+	padding: 0 1em 0 0;
+	font-size: 40%;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.cg-submit:before {
+	content: "\e001";
+	color: #fff;
+	float: left;
+	padding: 0 0.7em;
+	margin: 0 0.8em 0 0;
+	background: #69B1A9;
+}
+
+.no-touch .cg-form .cg-submit:hover,
+.no-touch .cg-form .cg-submit:active {
+	background: #69B1A9;
+}
+
+.no-touch .cg-form .cg-submit:hover:before {
+	background: #58a199;
+}
+
+/* overlay becomes visible when a field is opened */
+.cg-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	z-index: 9999;
+	visibility: hidden;
+	-webkit-transition: visibility 0s 0.3s, opacity 0.3s;
+	-moz-transition: visibility 0s 0.3s, opacity 0.3s;
+	transition: visibility 0s 0.3s, opacity 0.3s;
+}
+
+.cg-field.cg-field-open ~ .cg-overlay {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}

@@ -1,0 +1,109 @@
+// plans-new born
+
+.main-content-wrapper{
+    padding: 6rem 0 7rem 0;
+    .tab-content-heading{
+        margin-bottom: 2rem;
+    }
+}
+
+// cards info
+
+.card-info{
+    display: flex;
+    &__view{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        background: #ffffff;
+        padding: 5rem 1.5rem;
+        &:hover{
+            .view-hover{
+                visibility: visible;
+                transform: background-color 0.15s ease-in-out;
+            }
+        }
+    }
+    &__link{
+        align-self: flex-start;
+    }
+    p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.view-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    background: #0a619d;
+    padding: 5rem 1.5rem;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    color: #ffffff;
+    transform: background-color 0.15s ease-in-out;
+    a{
+        color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+
+
+// plan-tabarea-details info
+
+.testimonials-info{
+    border-left: 2px solid #f7f8fa;
+    padding-left: 2rem;
+}   
+.author{
+    color: $gray-900;
+}
+
+.claculator-custom{
+    font-size: 18px;
+    line-height: 55px;
+    font-weight: $font-weight-normal;
+    color: #110101;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #f7f8fa;
+}
+
+
+// plans in savings borrow
+
+.clr-gray{
+    color: $gray-900;
+}
+
+.text-number{
+    font-size: 25px;
+    line-height: 35px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.numbers-list{
+    list-style-type: none;
+    position: relative;
+    .text-underline{
+        position: absolute;
+        height: 5rem;
+        top: 2%;
+        right: 11%;
+        background: #f7f8fa;
+        width: 2px;
+        span{
+            background: #fff;
+            position: relative;
+            top: 28%;
+            left: -4px;
+        }
+    }
+}

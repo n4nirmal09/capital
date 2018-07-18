@@ -1,0 +1,68 @@
+<div class="row">
+  <!-- Calculate-info-->
+  <div class="col-lg-8 pr-3 pr-md-4">
+    <!-- heading info-->
+    <h1 class="tab-content-heading">The Simple Planning Tool</h1>
+    <!-- calculate details-info-->
+
+    <div class="row mx-0">
+      <div class="col-md-4 mt-3">
+        <label for="" class="d-block">Child's Age</label>
+        <select class="ui dropdown w-100">
+          <option value="">0</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </div>
+      <div class="col-md-4 mt-3">
+        <label for="" class="d-block">Household Income</label>
+        <select class="ui dropdown w-100">
+          <option value="">$100,00</option>
+          <option value="">$200,00</option>
+          <option value="">$300,00</option>
+        </select>
+      </div>
+      <div class="col-md-4 mt-3">
+        <label for="" class="d-block">Monthly Contribution</label>
+        <select class="ui dropdown w-100">
+          <option value="">$165</option>
+          <option value="">$180</option>
+        </select>
+      </div>
+      <div class="col-md-6 mt-3">
+        <label for="" class="d-block">Type of school</label>
+        <select class="ui dropdown w-100">
+          <option value="4">4 year private school</option>
+          <option value="3">3 year private school</option>
+          <option value="2">2 year gov school</option>
+        </select>
+      </div>
+      <div class="col-md-6 mt-3">
+        <label for="" class="d-block">Type of university</label>
+        <select class="ui dropdown w-100">
+          <option value="">Stanford</option>
+          <option value="">MIT</option>
+        </select>
+      </div>
+      <div class="col-12 mt-5">
+        ${require('html-loader?interpolate!./graph.html')}
+      </div>
+    </div>
+    <div>
+      <button class="next btn btn-outline-primary" type="button">Next</button>
+    </div>
+  </div>
+  <!-- clients testimonials-->
+  <div class="col-lg-4 testimonials-info">
+    <span class="d-block mb-3 mb-md-4">We have helped over 1,000,000 parents like you pay for their kids education!</span>
+    <blockquote>
+      <img class="d-block mb-2" src="../assets/plans/quote.png" alt="quotes icon">
+      <p class="quotes-text my-2 fnt-lg">
+        <i>I started saving as soon as I found out I was pregnant with Tom. Everything felt really uncertain back then, but
+          it was important for me to start somewhere...</i>
+      </p>
+      <span class="author fnt-md fnt-bold d-block text-right">- Metilda J Tom</span>
+    </blockquote>
+  </div>
+</div>

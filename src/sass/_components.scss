@@ -48,9 +48,9 @@
 		{
 			transition: ease-out 0.4s;
 		}
-		
+
 		+ #main-content{
-			padding-top: 133px;
+			padding-top: 80px;
 		}
 	}
 
@@ -63,7 +63,7 @@
 	.logo-holder{
 		margin-top: -22px;
 	}
-	
+
 	@include bd-float-bp-min {
 		// header scroll manupulation
 		@at-root .scrolled {
@@ -95,7 +95,7 @@
 			}
 		}
 	}
-	
+
 }
 
 //Navigation
@@ -104,7 +104,7 @@
 	justify-content: center;
 	> li {
 		> a{
-			
+
 			padding: 20px 30px;
 			position: relative;
 			color: $secondary;
@@ -146,7 +146,7 @@
 	  	}
 	  	transform: none!important;
   	}
-	
+
 	.container{
 		position: relative;
 	}
@@ -187,7 +187,7 @@
   		}
   	}
 
-  	.side-cta-holder 
+  	.side-cta-holder
   	{
   		padding:20px 15px;
   		flex-flow: row wrap;
@@ -206,7 +206,7 @@
   		.btn{
   			max-width: 320px;
   			margin: 20px auto!important;
-  			
+
   		}
   	}
   }
