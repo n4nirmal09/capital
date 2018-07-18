@@ -176,6 +176,17 @@ module.exports = {
         collapseWhitespace: false,
         removeAttributeQuotes: true
       }
+    }),
+    //SubTab Html
+    new HtmlWebpackPlugin({
+      filename: 'sub-tab.html',
+      template: 'sub-tab.html',
+      inject: true,
+      minify: {
+        removeComments: false,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+      }
     })
   ]
 }

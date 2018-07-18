@@ -82,7 +82,7 @@
 				}
 				.nav-list
 				{
-					opacity: 0;
+					//opacity: 0;
 				}
 			}
 		}
@@ -262,5 +262,23 @@
 		position: absolute;
 		left: 0;
 		top:0;
+	}
+}
+
+
+.card
+{
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 fade-out(#000, 0.8);
+}
+
+.block-cta
+{
+	display: flex;
+	flex-flow: row wrap;
+
+	.cta-action
+	{
+		align-self: flex-end;
 	}
 }

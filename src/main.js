@@ -38,9 +38,9 @@ import './scripts/popup'
 // Site basic scripts
 siteScripts.init()
 // intialize banner slider
-if(window.innerWidth > 992){
-	if(select('#circle-nav')) new bannerSlider()
-}
+
+if (select('#circle-nav')) new bannerSlider()
+
 
 if (select('#plan-selection-slider')) new selectionTabs()
 
@@ -52,3 +52,9 @@ graph()
 // $('.dropdown').dropdown()
 
 import "@/sass/main.scss"
+
+
+$('.selectable-table .cg-table-list').on('click', function () {
+	$('.selectable-table .cg-table-list').removeClass('selected');
+	$(this).addClass('selected');
+});

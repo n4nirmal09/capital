@@ -10,7 +10,7 @@
             this.select()
             this.selectAll()
             this.scrollDierectionChecker()
-            this.smoothScrolling()
+            //this.smoothScrolling()
             this.resizeListner()
             this.scrollBarWidth()
             this.removeMethod()
@@ -147,9 +147,9 @@
                 }
             }
 
-            // window.onscroll = function(){scrollCheck()};
-            // window.addEventListener('mousewheel', scrollDirCheck);
-            // window.addEventListener('DOMMouseScroll', scrollDirCheck);
+            window.onscroll = function(){scrollCheck()};
+            window.addEventListener('mousewheel', scrollDirCheck);
+            window.addEventListener('DOMMouseScroll', scrollDirCheck);
 
         },
 
