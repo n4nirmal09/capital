@@ -9,7 +9,20 @@
 	list-style-type: none;
 	// width: ;
 	float: left;
-  position: relative;
+	position: relative;
+	opacity: 0.8;
+
+	&.active {
+		opacity: 1;
+		font-weight: 700;
+	}
+
+	&.completed {
+		// opacity: 0.4;
+		&:before {
+			background: rgba(0,0,0,0.5);
+		}
+	}
   @media (min-width: $screen-md) {
     height: 60px;
     float: none;
@@ -66,5 +79,9 @@
 }
 /*Hide all except first fieldset*/
 .step:not(:first-of-type) {
+	display: none;
+}
+
+.inner-step:not(:first-of-type) {
 	display: none;
 }

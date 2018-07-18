@@ -1,62 +1,38 @@
 <section>
-        <div class="container py-5">
-          <div>
-            ${require('html-loader?interpolate!./planselectionlinkslider.html')}
-      
-            <!-- main-content start-->
-            <div class="main-content-wrapper">
-              <!-- heading info-->
-              <div class="row">
-                <div class="col-md-12 text-right">
-      
-                </div>
-              </div>
-              <!-- cards info-->
-              <div class="row">
-                <div class="col-md-4 col-lg-3">
-                  <ul id="progressbar" class="progressbar">
-                    <li class="active">Savings vs.Borrowing</li>
-                    <li>Establish Goal</li>
-                    <li>Understand your Numbers</li>
-                    <li>Create a Plan</li>
-                    <li>Validate your Strategy</li>
-                    <li>Open a 529</li>
-                  </ul>
-                </div>
-                <!-- card2-->
-                <div class="col-md-8 col-lg-9">
-                  <fieldset class="step w-100">
-                    ${require('html-loader?interpolate!./plan-savings-step1.html')}
-                    
-                  </fieldset>
-                  <fieldset class="step w-100">
-                    ${require('html-loader?interpolate!./plandetail-step1.html')}
-                    <button class="previous btn btn-outline-primary" type="button">Back</button>
-                    <!-- <button class="next btn btn-outline-primary" type="button">Next</button> -->
-                  </fieldset>
-                  <fieldset class="step w-100">
-                    ${require('html-loader?interpolate!./plandetail-step1.html')}
-                    <button class="previous btn btn-outline-primary" type="button">Back</button>
-                    <!-- <button class="next btn btn-outline-primary" type="button">Next</button> -->
-                  </fieldset>
-                  <fieldset class="step w-100">
-                    ${require('html-loader?interpolate!./plandetail-step1.html')}
-                    <button class="previous btn btn-outline-primary" type="button">Back</button>
-                    <!-- <button class="next btn btn-outline-primary" type="button">Next</button> -->
-                  </fieldset>
-                  <fieldset class="step w-100">
-                    ${require('html-loader?interpolate!./plandetail-step1.html')}
-                    <button class="previous btn btn-outline-primary" type="button">Back</button>
-                    <button class="btn btn-outline-primary" type="submit">Submit</button>
-      
-                  </fieldset>
-      
-                </div>
-                <!-- cards info end-->
-              </div>
-      
-            </div>
+  <div class="container py-5">
+    <div>
+      ${require('html-loader?interpolate!./planselectionlinkslider.html')}
+
+      <!-- main-content start-->
+      <div class="main-content-wrapper">
+        <!-- heading info-->
+        <div class="row">
+          <div class="col-md-12 text-right">
+
           </div>
         </div>
-      </section>
-      
+        <!-- cards info-->
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <ul id="progressbar" class="progressbar">
+              <li class="active">Savings vs.Borrowing</li>
+              <li>Results</li>
+            </ul>
+          </div>
+          <!-- card2-->
+          <div class="col-md-8 col-lg-9">
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plan-savings-step1.html')}
+            </fieldset>
+            <fieldset class="step w-100">
+              ${require('html-loader?interpolate!./plan-savings-step2.html')}
+            </fieldset>
+
+          </div>
+          <!-- cards info end-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

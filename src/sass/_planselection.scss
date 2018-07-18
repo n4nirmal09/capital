@@ -10,6 +10,7 @@
 			text-align: center;
 			> a{
 				display: block;
+				margin-top: 10px;
 				font-size: calculateRem(16px, $font-size-html);
 				color: $secondary;
 				svg path
@@ -26,7 +27,12 @@
 						fill: $primary;
 					}
 					color: $primary;
+					
 					text-decoration: none;
+				}
+
+				&.active {
+					font-weight: 700;
 				}
 			}
 		}
@@ -165,6 +171,11 @@
 	> div:not(.active)
 	{
 		display: none;
+	}
+	&__underline{
+		a:hover{
+			text-decoration: none; 
+		}
 	}
 }
 
