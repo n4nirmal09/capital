@@ -4,7 +4,6 @@ import 'TweenMax' // aliases given in base.config
 import 'animation.gsap' // aliases given in base.config
 import './utilities/modernizr'
 import $ from 'jquery'
-
 // Semantic Ui
 // import 'semantic-ui-popup/popup.css'
 // $.fn.popup = require('semantic-ui-popup')
@@ -31,6 +30,9 @@ import { selectionTabs } from './scripts/planselectiontab'
 import './scripts/progressbar'
 
 import './scripts/initCustomSelect'
+
+// popup js
+import './scripts/popup'
 
 
 // Site basic scripts
