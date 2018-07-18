@@ -1,32 +1,35 @@
 <header id="main-header" class="overlay-header bg-light">
 	<div class="container py-4">
 		<div class="row align-items-center">
+			<div id="site-hamburger" class="hamburger-menu" data-target="main-menu-holder">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<div class="logo-holder">
 				<a href="/">
 					<img src="../assets/logo.png" class="img-fluid" alt="">
 				</a>
 			</div>
+			<div class="menu-holder col d-flex align-items-center p-0" id="main-menu-holder">
+				<div class="col">
+					${require('html-loader!./mainnav.html')}
+				</div>
+				<div class="side-cta-holder d-flex align-items-center">
+					<div class="link-group">
+						<a href="">
+							<strong>LOGIN</strong>
+						</a>
+						/
+						<a href="">
+							<strong>SIGNUP</strong>
+						</a>
+					</div>
 
-			<div class="menu-holder col">
-				${require('html-loader!./mainnav.html')}
-			</div>
-
-
-
-			<div class="side-cta-holder d-flex align-items-center">
-				<div class="link-group">
-					<a href="">
-						<strong>LOGIN</strong>
-					</a>
-					/
-					<a href="">
-						<strong>SIGNUP</strong>
+					<a href="" class="btn btn-outline-primary ml-3">
+						OPEN A 529
 					</a>
 				</div>
-
-				<a href="" class="btn btn-outline-primary ml-3">
-					OPEN A 529
-				</a>
 			</div>
 		</div>
 	</div>

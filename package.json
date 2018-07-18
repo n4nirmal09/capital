@@ -16,6 +16,9 @@
     "jquery": "^3.3.1",
     "nodelist-foreach-polyfill": "^1.2.0",
     "scrollmagic": "^2.0.5",
+    "semantic-ui-dropdown": "^2.3.2",
+    "semantic-ui-popup": "^2.3.1",
+    "semantic-ui-transition": "^2.3.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

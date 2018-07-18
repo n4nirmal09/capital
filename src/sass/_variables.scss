@@ -128,7 +128,7 @@ $paragraph-margin-bottom:   1rem !default;
 
 $screen-sm: 576px;
 $screen-md: 768px;
-$screen-lg: 992px;
+$screen-lg: 1025px;
 $screen-xl: 1200px;
 
 $grid-breakpoints: (
@@ -157,6 +157,8 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
+
+$grid-float-breakpoint: $screen-lg;
 
 // Components
 //

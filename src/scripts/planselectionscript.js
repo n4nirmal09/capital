@@ -10,11 +10,11 @@ export const bannerSlider = function () {
         this.slideDelay = 3
 
         this.init()
-        
+
 }
 
 bannerSlider.prototype = {
-	init () { 
+	init () {
 		this.disappearCircles()
 		this.entryTimeline()
 		this.addMainTimeline()
@@ -26,7 +26,7 @@ bannerSlider.prototype = {
 		const circleRail = this.circleRail
 
     	// circleDots.forEach(dot => {
-	    // 	dot.style.strokeDasharray = dot.getTotalLength() 
+	    // 	dot.style.strokeDasharray = dot.getTotalLength()
 	    // 	dot.style.strokeDashoffset = dot.getTotalLength()
 	    // 	dot.dataset.strokeoffset = dot.getTotalLength()
 	    // })
@@ -38,14 +38,14 @@ bannerSlider.prototype = {
 
 	entryTimeline () {
 		let tl = new TimelineMax({
-			delay: 0.5, 
+			delay: 0,
 			onComplete: () => {
 				this.mainTimeLine.play()
 			}
 		 }),
 		controller = new ScrollMagic.Controller()
 
-		tl.to(this.circleRail, 0.8, {
+		tl.to(this.circleRail, 0.5, {
 			strokeDashoffset: 0,
 				//strokeDasharray: "5.006 5.006",
 			transformOrigin: '50% 50%'
@@ -101,7 +101,7 @@ bannerSlider.prototype = {
 				clearTimeout(timeOut)
 				this.mainTimeLine.seek(currentLabel + "+=" + this.slideDelay)
 				//this.mainTimeLine.seek(target)
-				timeOut = setTimeout(seekTo,800) 
+				timeOut = setTimeout(seekTo,800)
 			})
 		})
 	},

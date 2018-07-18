@@ -20,3 +20,13 @@
 //     border-radius: 0;
 // }
 /* Graph End */
+
+.highcharts-yaxis {
+  display: none;
+}
+
+.highcharts-legend-item {
+  .text {
+    font-family: "Avenir Next", sans-serif;
+  }
+}
