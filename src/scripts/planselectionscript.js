@@ -19,6 +19,7 @@ bannerSlider.prototype = {
 		this.entryTimeline()
 		this.addMainTimeline()
 		this.sliderNavigation()
+		// /this.resize()
 	},
 
 	disappearCircles () {
@@ -60,7 +61,6 @@ bannerSlider.prototype = {
 		new ScrollMagic.Scene({triggerElement: this.circleNav,duration:0, triggerHook: 'onCenter', offset:-200})
 		.setTween(tl)
 		.addTo(controller)
-
 
 	},
 
@@ -114,6 +114,13 @@ bannerSlider.prototype = {
 				nav.classList.add('active')
 			}
 		})
-	}
+	},
+
+	// resize () {
+		
+	// 	if (this.mainTimeLine){
+	// 		this.mainTimeLine.kill(null)
+	// 	}
+	// }
 }
 
