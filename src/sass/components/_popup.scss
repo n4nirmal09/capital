@@ -6,6 +6,7 @@
 	background: #fff;
 	box-shadow: 0 1px 3px #e3e3e3;
 	z-index: 11;
+	display: none;
 }
 .popup-body {
 	padding: 50px 50px 50px 50px;
@@ -45,6 +46,17 @@
 .popup-block {
 	&__title {
 		font-size: 35px;
+	}
+	&__input {
+		border: 0;
+	    box-shadow: 0 1px 20px #e3e3e3;
+	    padding: 17px 22px;
+	    width: 100%;
+	    font-size: 20px;
+    	font-weight: 500;
+	    &:focus {
+		    box-shadow: 0 1px 20px #e3e3e3;
+	    }
 	}
 }
 .navigate-block {
