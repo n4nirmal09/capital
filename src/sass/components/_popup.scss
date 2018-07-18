@@ -8,10 +8,26 @@
 	z-index: 11;
 	display: none;
 }
+
+#imageModal {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	// background: #fff;
+	box-shadow: 0 1px 3px #e3e3e3;
+	z-index: 11;
+	display: none;
+
+	img {
+		max-width: 75% !important;
+	}
+}
+
 .popup-body {
 	padding: 50px 50px 50px 50px;
 }
-#modal-overlay {
+.modal-overlay {
 	position: fixed;
 	left: 0;
 	right: 0;
