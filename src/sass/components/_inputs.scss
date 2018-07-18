@@ -87,6 +87,14 @@ input, .form-control{
     transform: scale(1);
 }
 
+.radio-check-fileds{
+  .form-check{
+      justify-content: center;
+      position: relative;
+      top: -13%;
+  }
+}
+
 // dropdown
 
 .claculator-custom{
