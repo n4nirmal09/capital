@@ -1,5 +1,5 @@
 #exampleModalLong {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -70,3 +70,21 @@
     	}
     }
 }
+.btn-gray {
+	background: #999;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 30px;
+	padding: 10px 20px;
+	display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+// .img-palceholder {
+// 	background: #e6e6e6;
+// }
