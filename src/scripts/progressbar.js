@@ -3,9 +3,12 @@ import $ from 'jquery';
 var current_fs, next_fs, previous_fs; //fieldsets
 // var left, opacity, scale; //fieldset properties which we will animate
 // var animating; //flag to prevent quick multi-click glitches
-
+console.log("1");
+// $('.right-slider').slick('setPosition');
 $(".next").click(function () {
+  // $('.right-slider')
   current_fs = $(this).closest('.step');
+  
   next_fs = $(this).closest('.step').next();
   previous_fs = $(this).closest('.step').prev();
 
@@ -15,8 +18,13 @@ $(".next").click(function () {
   $(".progressbar li").eq($(".step").index(current_fs)).addClass("completed");
 
   //show the next fieldset
-  next_fs.show();
-  current_fs.hide();
+  // next_fs.show();
+  next_fs.css({'height':'auto', 'overflow': 'visible'});
+  
+  // current_fs.hide();
+  current_fs.css({'height':'0','overflow': 'hidden'});
+  
+  // current_fs.css({'height':'0','overflow':'hidden'})
 });
 
 $(".previous").click(function () {
@@ -28,8 +36,11 @@ $(".previous").click(function () {
   $(".progressbar li").eq($(".step").index(previous_fs)).addClass("active");
 
   //show the previous fieldset
-  current_fs.hide();
-  previous_fs.show();
+  // current_fs.hide();
+  current_fs.css({'height':'0','overflow': 'hidden'})
+  // current_fs.css({'height':'0','overflow':'hidden'})
+  // previous_fs.show();
+  previous_fs.css({'height':'auto','overflow': 'visible'})
 });
 
 

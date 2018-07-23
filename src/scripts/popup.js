@@ -18,3 +18,19 @@ $(document).ready(function () {
 		$("#modal-overlay").removeClass('active');
 	})
 });
+
+$('#site-hamburger').on('click', function(e){
+	e.preventDefault();
+	console.log('show image pop')
+	$("#imageModal").show();
+		// $(this).parents("#main-content").find("#exampleModalLong").show();
+	$("#image-overlay").addClass('active');
+})
+$('#imageModal').on('click', function(e){
+	e.preventDefault();
+	// console.log('show image pop')
+	$("#imageModal").hide();
+		// $(this).parents("#main-content").find("#exampleModalLong").show();
+	$("#image-overlay").removeClass('active');
+})
+

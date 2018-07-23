@@ -79,7 +79,9 @@
 }
 /*Hide all except first fieldset*/
 .step:not(:first-of-type) {
-	display: none;
+	// display: none;
+	height: 0;
+	overflow: hidden;
 }
 
 .inner-step:not(:first-of-type) {

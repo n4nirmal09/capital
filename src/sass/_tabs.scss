@@ -100,18 +100,18 @@
 }
 
 .custom-tab {
-  &-inner {
-    display: none;
+&-inner {
+display: none;
 
-    &.active {
-      display: block;
-    }
-  }
+&.active {
+display: block;
+}
+}
 
-  &-link {
-    color: #333333;
-    &.active {
-      color: $theme-primary;
-    }
-  }
+&-link {
+color: #333333;
+&.active {
+color: $theme-primary;
+}
+}
 }

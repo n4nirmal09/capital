@@ -7,7 +7,7 @@ export const bannerSlider = function () {
 		this.circleRail = select('#circle-nav-rail circle')
 		this.circleDots = selectAll('#circle-nav-dots circle')
 		this.mainTimeLine = null
-        this.slideDelay = 3
+        this.slideDelay = 8
 
         this.init()
 
@@ -16,7 +16,7 @@ export const bannerSlider = function () {
 bannerSlider.prototype = {
 	init () {
 		this.disappearCircles()
-		this.entryTimeline()
+		//this.entryTimeline()
 		this.addMainTimeline()
 		this.sliderNavigation()
 		// /this.resize()
@@ -65,20 +65,20 @@ bannerSlider.prototype = {
 	},
 
 	addMainTimeline () {
-		let tl = new TimelineMax({repeat: -1, paused: true})
+		let tl = new TimelineMax({repeat: -1})
 
 		this.slides.forEach(slide => {
 			let slideItems = slide.children
 			tl.from(slide,0.2,{autoAlpha: 0}, slide.id)
-			.staggerFrom(slideItems,0.5,{
+			.staggerFrom(slideItems,0.2,{
 				autoAlpha: 0,
-				y: 100,
-			}, 0.1, slide.id)
-			.staggerTo(slideItems,0.5,{
+				//y: 100,
+			}, 0, slide.id)
+			.staggerTo(slideItems,0.2,{
 				//delay: this.slideDelay,
-				y: 100,
+				//y: 100,
 				autoAlpha: 0
-			}, -0.1,slide.id + "+=" + this.slideDelay)
+			}, 0,slide.id + "+=" + this.slideDelay)
 			.to(slide,0.2,{autoAlpha: 0}, slide.id + 'leave')
 			.addCallback(this.bannerUpdate,slide.id,[tl, this])
 		})
@@ -101,7 +101,7 @@ bannerSlider.prototype = {
 				clearTimeout(timeOut)
 				this.mainTimeLine.seek(currentLabel + "+=" + this.slideDelay)
 				//this.mainTimeLine.seek(target)
-				timeOut = setTimeout(seekTo,800)
+				timeOut = setTimeout(seekTo,200)
 			})
 		})
 	},

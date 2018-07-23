@@ -110,3 +110,21 @@ input, .form-control{
     }  
   }
 }
+
+// radio table
+.radio-table {
+  margin-top: 60px;
+}
+[type="radio"]:checked + .radio-table:after , [type="radio"]:not(:checked) + .radio-table:after {
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+}
+[type="radio"]:checked + .radio-table:before , [type="radio"]:not(:checked) + .radio-table:before {
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+}
+[type="radio"]:checked + .radio-table, [type="radio"]:not(:checked) + .radio-table {
+  padding-left: 0;
+}

@@ -20,6 +20,8 @@ import './utilities/slick.js'
 // import './utilities/dropdown.js'
 // import './utilities/checkbox.js'
 
+// slick slider
+import './scripts/slick-init'
 // Site script
 import siteScripts from './scripts/sitescripts'
 // import graph from './scripts/graphscript'
@@ -35,8 +37,7 @@ import './scripts/yearAddCustomSelect'
 
 // popup js
 import './scripts/popup'
-// slick slider
-import './scripts/slick-init'
+
 
 
 // Site basic scripts
@@ -49,9 +50,13 @@ if (select('#circle-nav')) new bannerSlider()
 if (select('#plan-selection-slider')) new selectionTabs()
 
 
-
 // intialize graph
 // graph()
+
+$('.selection-link').on('click', function(){
+	console.log('show');
+	graph()
+});
 
 // $('.dropdown').dropdown()
 
@@ -63,16 +68,12 @@ $('.selectable-table .cg-table-list').on('click', function () {
 	$(this).addClass('selected');
 });
 
-// $(fuction(){
-// })
-
 $(function () {
-	$('.custom-tab-links a').on('click', function (e) {
-		e.preventDefault();
-		$('.custom-tab-inner').removeClass('active');
-		$('.custom-tab-link').removeClass('active');
-		$(this).addClass('active');
-		$($(this).attr('href')).addClass('active');
-	});
+    $('.custom-tab-links a').on('click', function (e) {
+        e.preventDefault();
+        $('.custom-tab-inner').removeClass('active');
+        $('.custom-tab-link').removeClass('active');
+        $(this).addClass('active');
+        $($(this).attr('href')).addClass('active');
+    });
 })
-
