@@ -57,7 +57,7 @@ function select (s) {
       })
       this.chart.series[0].setData(this.calculateGraphData(), true)
       this.chart.tooltip['pin']()
-      setTimeout(() => { this.chart.tooltip.refresh(this.chart.series[0].points[0]) }, 1000);
+      setTimeout(() => { this.chart.tooltip.refresh(this.chart.series[0].points[0]) }, 2000);
       
   	},
 
