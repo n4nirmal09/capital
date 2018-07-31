@@ -7,7 +7,7 @@
         <div class="tab-wrapper pt-5 active" id="plan-1">
           <div class="tab-links">
             <ul class="list-unstyled">
-              <li class="tab-link">
+              <li class="tab-link active">
                 <a href="#tab-1">
                   Overview
                 </a>
@@ -22,7 +22,7 @@
                   What are my options?
                 </a>
               </li>
-              <li class="tab-link active">
+              <li class="tab-link">
                 <a href="#tab-4">
                   Re-valuating my 529 strategy?
                 </a>
@@ -41,7 +41,8 @@
           </div>
           <div class="tab-contents">
 
-            <div id="tab-1">
+            <div id="tab-1" class="active">
+
               <article class="pl-5 text-left">
                 <h3 class="tab-content-subheading">expecting a newborn</h3>
                 <h1 class="tab-content-heading">Managing the balancing act</h1>
@@ -79,8 +80,8 @@
               </div>
               <div class="text-right">
                 <a href="javascript:void(0);" class="btn btn-outline-primary mt-3">
- VIEW MORE
- </a>
+                  VIEW MORE
+                </a>
               </div>
             </div>
 
@@ -110,59 +111,7 @@
               </div>
             </div>
 
-            <div id="tab-4" class="active">
-              <article class="pl-5 text-left">
-                <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
-                <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
-                  go.
-                </p>
-                <div class="row" id="graph-maker">
-                  <div class="col-sm-6 mt-4">
-                    <!-- <form id="savingPlan-form" class="cg-form">
-                     
-                    </form> -->
-                    <select name="saving_plan" id="select_amt" class="custom-select d-block">
-                        <option value=50>$50/month</option>
-                        <option value=100>$100/month</option>
-                        <option value=200>$200/month</option>
-                    </select>
-                     <select name="saving_plan" id="select_year" class="custom-select d-block mt-2">
-                        <option value=0>year 1</option>
-                        <option value=5>year 5</option>
-                        <option value=10>year 10</option>
-                        <option value=15>year 15</option>
-                        <option value=20>year 20</option>
-                      </select>
-
-                      <div class="mt-4">
-                        <div id="year-range" class="range-custom-slider">
-                          <input type="range" class="slider" 
-                          min="0" max="20" id="year-range-input" step="5" value="1">
-                        </div>
-                        <ul class="slider-labels">
-                          <li>year 1</li>
-                          <li>year 5</li>
-                          <li>year 10</li>
-                          <li>year 15</li>
-                          <li>year 20</li>
-                        </ul>
-                      </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="graph-top-hints">
-                      by the year <span id="hint-year"></span> the amount would be
-                      <span id="hint-amount"></span> $
-                    </div>
-                    <div>
-                       ${require('html-loader?interpolate!./graph.html')}
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-
-             <!-- <div id="tab-4">
+            <div id="tab-4">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Start small today, grow bigger tomorrow.</h1>
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
@@ -189,14 +138,14 @@
                 </div>
               </article>
 
-            </div> -->
+            </div>
 
             <div id="tab-5">
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford
-                  to save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
                   you.
                 </p>
               </article>
@@ -208,11 +157,11 @@
                     <option value="AL">a 2 year private school</option>
                     <option value="AK">a 3 year private school</option>
                     <option value="CO">a 4 year private school</option>
-                    </select>
-                    <br> like
-                    <select class="ui search dropdown">
-                      <option value="Stanford">Stanford University</option>
-                      <option value="Harvard">Harvard University</option>
+                  </select>
+                  <br> like
+                  <select class="ui search dropdown">
+                    <option value="Stanford">Stanford University</option>
+                    <option value="Harvard">Harvard University</option>
                   </select>
                 </h6>
                 <div class="mt-2">
@@ -365,7 +314,8 @@
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
                   go.
                 </p>
-                ${require('html-loader?interpolate!./graph.html')}
+                <div id="child-revaluate-graph" style="max-width: 400px;">
+                </div>
               </article>
 
             </div>
@@ -374,8 +324,8 @@
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford
-                  to save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
                   you.
                 </p>
               </article>
@@ -586,8 +536,8 @@
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford
-                  to save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
                   you.
                 </p>
               </article>
@@ -700,14 +650,32 @@
                 <h1 class="tab-content-heading">Understand the basics</h1>
                 <p class="tab-content-desc">Now that you’re child’s headed to college, learning the implications of withdrawing from your 529 and taking
                   out student loans take priority. See what questions other parents and children like you are asking at this
-                  stage.</p>
+                  stage.
+                </p>
               </article>
 
-              <div class="mt-5">
-                <h5 class="pl-5 text-secondary">Top questions other parents are asking.</h5>
-              </div>
               <div class="mt-3">
-                ${require('html-loader?interpolate!./accordian.html')}
+                <div class="d-flex justify-content-between pl-5">
+                  <span class="fnt-sm text-uppercase bold">Top questions other parents are asking.</span>
+                  <span class="custom-tab-links">
+                    <a href="#kid-tab" class="custom-tab-link text-uppercase">
+                      <strong>Kids</strong>
+                    </a>
+                    <a href="#parent-tab" class="custom-tab-link ml-3 text-uppercase active">
+                      <strong>Parents</strong>
+                    </a>
+                  </span>
+                </div>
+                <div class="custom-tab pl-5">
+                  <div id="kid-tab" class="mt-3 custom-tab-inner">
+                    <div>
+                      ${require('html-loader?interpolate!./accordian-kid.html')}
+                    </div>
+                  </div>
+                  <div id="parent-tab" class="mt-3 custom-tab-inner active">
+                    ${require('html-loader?interpolate!./accordian-parent.html')}
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -740,8 +708,83 @@
                 <h1 class="tab-content-heading">Save Smart — Withdraw Smart</h1>
                 <p class="tab-content-desc">Figuring your withdrawal strategy can be a tough decision. Should you withdraw it all now or distribute it
                   over a period of time? How much should you distribute? Find the strategy that best fits your financial
-                  picture.</p>
-                ${require('html-loader?interpolate!./graph.html')}
+                  picture.
+                </p>
+                <!-- ${require('html-loader?interpolate!./graph.html')} -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="card">
+                      <div class="row mb-3">
+                        <div class="col-sm-6">
+                          <h5>Find Your Strategy</h5>
+                          <div class="d-flex tab-input-info m-0 ">
+                            <div class="pr-3">
+                              <label class="fnt-md">Estimated cost</label>
+                              <input type="text" class="form-control input-xs fnt-md bold" aria-describedby="dollar-number" value="$900,00">
+                            </div>
+                            <div class="pr-3">
+                              <label class="fnt-md" for="exampleInputEmail1">Value of 529</label>
+                              <input type="text" disabled class="form-control border-bottom-0 input-xs fnt-md bold" aria-describedby="dollar-number" value="$200">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <p class="tab-content-desc">A 529 is a tax-friendly savings account designed to encourage saving for your kid’s education costs
+                            at eligible undergraduate, graduate and trade schools, or for technical and professional training.</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <form id="yearAddPlan-form" class="cg-form yearAdd-form">
+                            <div>
+                              <label class="fnt-md">1ST YEAR</label>
+                              <select name="yearAdd_plan1" id="">
+                                <option value="25%">25%</option>
+                                <option value="50%">50%</option>
+                                <option value="100%">100%</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label class="fnt-md">2ND YEAR</label>
+                              <select name="yearAdd_plan2" id="">
+                                <option value="25%">25%</option>
+                                <option value="50%">50%</option>
+                                <option value="100%">100%</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label class="fnt-md">3RD YEAR</label>
+                              <select name="yearAdd_plan3" id="">
+                                <option value="25%">25%</option>
+                                <option value="50%">50%</option>
+                                <option value="100%">100%</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label class="fnt-md">4TH YEAR</label>
+                              <select name="yearAdd_plan4" id="">
+                                <option value="25%">25%</option>
+                                <option value="50%">50%</option>
+                                <option value="100%">100%</option>
+                              </select>
+                            </div>
+                            <div class="text-left ">
+                              <a class="btn btn-outline-primary ml-3 mt-4" href="javascript:void(0);">
+                                <span>+</span> Add year
+                              </a>
+                            </div>
+                          </form>
+                          <p class="tab-content-desc">Want some money left for graduate school? Click here to see how to optimize your 529 savings</p>
+                        </div>
+
+                        <!-- <div class="col-sm-6">
+                                <p class="tab-content-desc">A 529 is a tax-friendly savings account designed to encourage saving for your kid’s education costs at eligible
+                               undergraduate, graduate and trade schools, or for technical and professional training.</p>
+                            </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </article>
 
             </div>
@@ -806,7 +849,7 @@
               </li>
               <li class="tab-link">
                 <a href="#tab-5-3">
-                   Why should I open a 529 plan?
+                  Why should I open a 529 plan?
                 </a>
               </li>
               <!-- <li class="tab-link">
@@ -895,7 +938,7 @@
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
                   go.
                 </p>
-                ${require('html-loader?interpolate!./graph.html')}
+                <!-- ${require('html-loader?interpolate!./graph.html')} -->
               </article>
 
             </div>
@@ -904,8 +947,8 @@
               <article class="pl-5 text-left">
                 <h1 class="tab-content-heading">Find your magic number</h1>
                 <p class="tab-content-desc">How much you should be putting away each month depends on a few things:
-                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford
-                  to save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
+                  <br> the type of school you are saving for, how much of it you plan to cover and how much you can afford to
+                  save. Our planning tool will help you set a realistic goal and find the contribution amount that suits
                   you.
                 </p>
               </article>

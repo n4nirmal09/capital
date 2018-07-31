@@ -22,11 +22,24 @@
 /* Graph End */
 
 .highcharts-yaxis {
-  display: none;
+  //display: none;
+  text{
+  	display: none;
+  }
 }
 
 .highcharts-legend-item {
   .text {
     font-family: "Avenir Next", sans-serif;
   }
+}
+
+.highcharts-tooltip span {
+    width:140px;
+    overflow:auto;
+    white-space:normal !important;
+}
+
+.highcharts-markers.highcharts-series-0{
+	display: none;
 }

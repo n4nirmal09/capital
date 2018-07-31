@@ -1,69 +1,132 @@
 import Highcharts from 'highcharts'
+import graphData from '../scripts/graphdata'
 
-export default () => {
-	if (!document.getElementById('graph-container')) return
-	Highcharts.chart('graph-container', {
-	  chart: {
-	    type: 'areaspline'
-	  },
-	  title: {
-	    text: ''
-	  },
-	  // legend: {
-	  //   layout: 'vertical',
-	  //   align: 'left',
-	  //   verticalAlign: 'top',
-	  //   x: 150,
-	  //   y: 100,
-	  //   floating: true,
-	  //   borderWidth: 1,
-	  //   backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-	  // },
-	  xAxis: {
-	    categories: [
-	      '1',
-	      '5',
-	      '10',
-	      '15',
-	      '20'
-	    ],
-	    plotBands: [{ // visualize the weekend
-	      from: 4.5,
-	      to: 6.5,
-	      // color: 'rgba(68, 170, 213, .2)'
-	    }]
-	  },
-	  yAxis: {
-	    // title: {
-	    //   tickWidth: 0
-			// }
-			tickWidth: 0,
-			crosshair: false,
-			lineWidth: 0,
-			gridLineWidth:0,
-			labels: {
-				format:'{value}',
-						style: {
-								opacity: '0',
-								fontSize:'0'
-						}
-				}
-	  },
-	  tooltip: {
-	    shared: false,
-	    valueSuffix: ' $'
-	  },
-	  credits: {
-	    enabled: false
-	  },
-	  plotOptions: {
-	    areaspline: {
-	      fillOpacity: 0.5
-	    }
-	  },
-	  series: [{
-	    name: 'Years',
-	    data: [0, 1, 3, 8, 11]
-	  }]
-	});
+// export default (graphData) => {
+// 	if (!document.getElementById('graph-container')) return
+// 	Highcharts.chart('graph-container', graphData);
+// }
+
+function select (s) {
+	return document.querySelector(s)
 }
+
+
+
+
+(function (window) {
+
+  'use strict';
+
+  Highcharts.Tooltip.prototype.pin = function () {
+        this._hide = this.hide
+        this.hide = function(){} // overriding hide function to nothing to remove mouseout tooltip hide
+  }
+
+  const SelectionGraph = function () {
+  	this.graphMaker = select('#graph-maker')
+  	this.graphContainer = select('#graph-container')
+  	this.amtSelect = this.graphMaker.querySelector('#select_amt')
+  	this.amt = this.amtSelect.value
+  	this.yearSelect = this.graphMaker.querySelector('#select_year')
+    this.yearRange =  select('#year-range')
+    this.yearRangeInput =  select('#year-range-input')
+    this.yearRangeLabelsHolder =  this.graphMaker.querySelector('.range-labels')
+    this.yearRangeLabels = this.graphMaker.querySelectorAll('.range-labels li')
+    this.yearHint = this.graphMaker.querySelector('#hint-year')
+    this.amtHint = this.graphMaker.querySelector('#hint-amount')
+  	this.chart = null
+    this.years = [1, 5, 10, 15, 20]
+  	this.init()
+  }
+  SelectionGraph.prototype = {
+  	init () {
+  		this.setGraph()
+      this.setHint()
+  		this.yearChangeListener()
+      this.yearSliderInputListener()
+      this.amtSelectListener()
+      this.calculateGraphData()
+  	},
+
+  	setGraph () {
+  		this.chart = Highcharts.chart(this.graphContainer, graphData)
+      this.chart.update({
+        xAxis: {
+          categories:  this.years
+        }
+      })
+      this.chart.series[0].setData(this.calculateGraphData(), true)
+      this.chart.tooltip['pin']()
+      setTimeout(() => { this.chart.tooltip.refresh(this.chart.series[0].points[0]) }, 1000);
+      
+  	},
+
+    setHint () {
+      let year = this.yearSelect.value === "0" ? 1 : this.yearSelect.value,
+          amt = this.amt * year * 12
+      this.yearHint.innerHTML = year
+      this.amtHint.innerHTML = amt
+    },
+
+  	yearChangeListener () {
+  		this.yearSelect.addEventListener("change", () => {
+  			let yearVal = this.yearSelect.value
+        this.yearRangeInput.value = yearVal
+  			
+  			this.setHint()
+        this.showTooltip()
+  		})
+  	},
+
+    yearSliderInputListener () {
+      this.yearRangeInput.addEventListener('input', () => {
+        let yearVal = this.yearRangeInput.value
+        this.yearSelect.value = yearVal
+        
+        this.setHint()
+        this.showTooltip()
+      })
+    },
+
+    amtSelectListener () {
+
+      this.amtSelect.addEventListener('input', () => {
+         this.amt = this.amtSelect.value
+
+         this.setHint()
+         this.updateGraphData()
+         this.showTooltip()
+      })
+    },
+
+    calculateGraphData () {
+      let data = this.years.map(year => {
+        return this.amt * year * 12
+      })
+
+      return data
+    },
+
+    updateGraphData () {
+      this.chart.series[0].setData(this.calculateGraphData(), true)
+    },
+
+    showTooltip () {
+      let chart = this.chart,
+      yearIndex = this.years.findIndex(year => {
+        if(parseInt(this.yearSelect.value)){
+          return year === parseInt(this.yearSelect.value)
+        }
+        return 1
+      }),
+      tooltipPoint = chart.series[0].points[yearIndex]
+
+      //console.log(yearIndex)
+      chart.tooltip.refresh(tooltipPoint)
+    }
+  }
+
+
+  if (select('#graph-maker')) new SelectionGraph()
+
+})(window)

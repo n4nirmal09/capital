@@ -22,6 +22,7 @@ import './utilities/slick.js'
 
 // Site script
 import siteScripts from './scripts/sitescripts'
+// import graph from './scripts/graphscript'
 import './scripts/graphscript'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
@@ -30,9 +31,12 @@ import { selectionTabs } from './scripts/planselectiontab'
 import './scripts/progressbar'
 
 import './scripts/initCustomSelect'
+//import './scripts/yearAddCustomSelect'
 
 // popup js
 import './scripts/popup'
+// slick slider
+//import './scripts/slick-init'
 
 
 // Site basic scripts
@@ -46,15 +50,37 @@ if (select('#plan-selection-slider')) new selectionTabs()
 
 
 
-// intialize graph with graph data
-//graph(graphData)
+// intialize graph
+// graph()
 
 // $('.dropdown').dropdown()
 
 import "@/sass/main.scss"
+import rangeScript from './scripts/rangeScript';
+
+rangeScript({
+  $amountRange: $('.amountRange'),
+  $input: $('.amountRange input'),
+  $rangeLi: $('.range-labels li'),
+  $rangeLables: $('.range-labels')
+});
 
 
 $('.selectable-table .cg-table-list').on('click', function () {
 	$('.selectable-table .cg-table-list').removeClass('selected');
 	$(this).addClass('selected');
 });
+
+// $(fuction(){
+// })
+
+$(function () {
+	$('.custom-tab-links a').on('click', function (e) {
+		e.preventDefault();
+		$('.custom-tab-inner').removeClass('active');
+		$('.custom-tab-link').removeClass('active');
+		$(this).addClass('active');
+		$($(this).attr('href')).addClass('active');
+	});
+})
+
