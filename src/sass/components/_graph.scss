@@ -43,3 +43,14 @@
 .highcharts-markers.highcharts-series-0{
 	display: none;
 }
+
+.highcharts-crosshair
+{
+  stroke-width: 1.5px;
+  stroke: #000;
+}
+
+#graph-container
+{
+  pointer-events: none;
+}

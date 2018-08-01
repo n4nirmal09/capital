@@ -126,12 +126,18 @@
                         <option value=100>$100/month</option>
                         <option value=200>$200/month</option>
                     </select>
-                     <select name="saving_plan" id="select_year" class="custom-select d-block mt-2">
+                     <select name="saving_plan" id="select_year" class="custom-select d-none mt-2">
                         <option value=0>year 1</option>
                         <option value=5>year 5</option>
                         <option value=10>year 10</option>
                         <option value=15>year 15</option>
                         <option value=20>year 20</option>
+                      </select>
+
+                      <select name="saving_plan" id="select_period" class="custom-select d-block mt-2">
+                        <option value=0>Today</option>
+                        <option value=5>Tomorrow</option>
+                        <option value=10>Next Month</option>
                       </select>
 
                       <div class="mt-4">
@@ -365,7 +371,7 @@
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
                   go.
                 </p>
-                ${require('html-loader?interpolate!./graph.html')}
+                <!-- ${require('html-loader?interpolate!./graph.html')} -->
               </article>
 
             </div>
@@ -741,7 +747,7 @@
                 <p class="tab-content-desc">Figuring your withdrawal strategy can be a tough decision. Should you withdraw it all now or distribute it
                   over a period of time? How much should you distribute? Find the strategy that best fits your financial
                   picture.</p>
-                ${require('html-loader?interpolate!./graph.html')}
+                <!-- ${require('html-loader?interpolate!./graph.html')} -->
               </article>
 
             </div>
@@ -895,7 +901,7 @@
                 <p class="tab-content-desc">At this point dont worry about being perfect. Just start somewhere today and evolve your strategy as you
                   go.
                 </p>
-                ${require('html-loader?interpolate!./graph.html')}
+                <!-- ${require('html-loader?interpolate!./graph.html')} -->
               </article>
 
             </div>

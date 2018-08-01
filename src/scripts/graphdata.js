@@ -18,7 +18,10 @@ export default {
 	  xAxis: {
 	  	lineWidth: 1,
 		lineColor: '#000',
-		tickLength:0
+		tickLength:0,
+		crosshair: {
+	        enabled: true
+	     }
 	    // categories: [
 	    //   '1',
 	    //   '5',
@@ -32,7 +35,7 @@ export default {
 	    //   tickWidth: 0
 			// }
 			tickWidth: 0,
-			crosshair: false,
+			//crosshair: false,
 			lineWidth: 1,
 			lineColor: '#000',
 			gridLineWidth: 0,

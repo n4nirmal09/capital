@@ -22,6 +22,12 @@ function select (s) {
         this.hide = function(){} // overriding hide function to nothing to remove mouseout tooltip hide
   }
 
+  Highcharts.Point.prototype.highlight = function(event) {
+    this.onMouseOver(); // Show the hover marker
+    this.series.chart.tooltip.refresh(this); // Show the tooltip
+    this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
+  };
+
   const SelectionGraph = function () {
   	this.graphMaker = select('#graph-maker')
   	this.graphContainer = select('#graph-container')
@@ -57,7 +63,7 @@ function select (s) {
       })
       this.chart.series[0].setData(this.calculateGraphData(), true)
       this.chart.tooltip['pin']()
-      setTimeout(() => { this.chart.tooltip.refresh(this.chart.series[0].points[0]) }, 2000);
+      setTimeout(() => { this.chart.series[0].points[0].highlight() }, 2000);
       
   	},
 
@@ -113,6 +119,7 @@ function select (s) {
 
     showTooltip () {
       let chart = this.chart,
+      xAxis = chart.xAxis[0],
       yearIndex = this.years.findIndex(year => {
         if(parseInt(this.yearSelect.value)){
           return year === parseInt(this.yearSelect.value)
@@ -120,9 +127,9 @@ function select (s) {
         return 1
       }),
       tooltipPoint = chart.series[0].points[yearIndex]
-
       //console.log(yearIndex)
-      chart.tooltip.refresh(tooltipPoint)
+      //chart.tooltip.refresh(tooltipPoint)
+      tooltipPoint.highlight()
     }
   }
 
