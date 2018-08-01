@@ -1,0 +1,53 @@
+.input-selection-group
+{
+	label{
+		display: block;
+	}
+}
+
+.input-field-wrapper
+{
+	position: relative;
+	.input-field
+	{
+		display: block;
+		appearance: none;
+		border: none;
+		width: 100%;
+		font-weight: inherit;
+		font-size: inherit;
+	}
+	
+	.unit {
+		color: #000;
+	}
+
+	font-size: 25px;
+	font-weight: bold;
+	
+	&.large-field
+	{
+		font-size: 35px;
+	}
+	&.bordered
+	{
+		.input-field
+		{
+			border-bottom: 2px solid theme-color('secondary');
+		}
+	}
+	&.unit-prepend
+	{
+		.input-field
+		{
+			padding-left: .8em;
+		}
+		.unit{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			line-height: 1;
+			transform: translateY(-50%);
+		}
+	}
+}

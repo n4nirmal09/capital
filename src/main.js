@@ -23,6 +23,7 @@ import './utilities/slick.js'
 // Site script
 import siteScripts from './scripts/sitescripts'
 import './scripts/graphscript'
+import './scripts/saveborrow'
 import { bannerSlider } from './scripts/planselectionscript'
 import './scripts/customselect'
 import { selectionTabs } from './scripts/planselectiontab'

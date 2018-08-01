@@ -15,7 +15,7 @@ export const bannerSlider = function () {
 
 bannerSlider.prototype = {
 	init () {
-		this.disappearCircles()
+		//this.disappearCircles()
 		//this.entryTimeline()
 		this.addMainTimeline()
 		this.sliderNavigation()

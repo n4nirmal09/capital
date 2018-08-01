@@ -15,6 +15,7 @@
     "highcharts": "^6.1.1",
     "jquery": "^3.3.1",
     "nodelist-foreach-polyfill": "^1.2.0",
+    "nouislider": "^11.1.0",
     "scrollmagic": "^2.0.5",
     "semantic-ui-dropdown": "^2.3.2",
     "semantic-ui-popup": "^2.3.1",

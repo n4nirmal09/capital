@@ -91,6 +91,7 @@ $theme-colors: map-merge((
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
+  "black": $black,
   "highlight":  $highlight
 ), $theme-colors);
 // stylelint-enable
@@ -234,7 +235,7 @@ $display4-size:               (30px / $font-size-html) * 1rem;
 $display1-weight:             300;
 $display2-weight:             300 !default;
 $display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display4-weight:             500;
 $display-line-height:         $headings-line-height !default;
 
 // Buttons + Forms
