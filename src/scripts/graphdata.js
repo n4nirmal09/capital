@@ -51,7 +51,7 @@ export default {
 	    useHTML: true,
 	    formatter () {
 	    	return "in <strong>" + this.x + " Years</strong>, you would have already covered his " +
-	    	"1st year of tuition <br/>" +
+	    	"<strong>" + semester(this.x) + "</strong> year of tuition <br/>" +
 	    	"<strong>" + this.x + " Year : " + this.y + "$</strong>"
 	    }
 	  },
@@ -71,4 +71,24 @@ export default {
 	    name: 'Year',
 	   
 	  }]
+}
+
+function semester (year) {
+	let text = ''
+	switch (year) {
+		case 4: text = "2nd"
+		break
+		case 8: text = "4th"
+		break
+		case 12: text = "6th"
+		break
+		case 16: text = "8th"
+		break
+		case 20: text = "10th"
+		break
+		default: text = 0
+		break
+	}
+
+	return text
 }

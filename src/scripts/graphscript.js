@@ -41,7 +41,7 @@ function select (s) {
     this.yearHint = this.graphMaker.querySelector('#hint-year')
     this.amtHint = this.graphMaker.querySelector('#hint-amount')
   	this.chart = null
-    this.years = [1, 5, 10, 15, 20]
+    this.years = [0, 4, 8, 12, 16, 20]
   	this.init()
   }
   SelectionGraph.prototype = {
@@ -121,10 +121,12 @@ function select (s) {
       let chart = this.chart,
       xAxis = chart.xAxis[0],
       yearIndex = this.years.findIndex(year => {
-        if(parseInt(this.yearSelect.value)){
-          return year === parseInt(this.yearSelect.value)
-        }
-        return 1
+        // if(parseInt(this.yearSelect.value)){
+        //   return year === parseInt(this.yearSelect.value)
+        // }
+        // return 1
+
+        return year === parseInt(this.yearSelect.value)
       }),
       tooltipPoint = chart.series[0].points[yearIndex]
       //console.log(yearIndex)
